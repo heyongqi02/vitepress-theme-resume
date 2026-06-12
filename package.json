@@ -30,9 +30,7 @@
   },
   "scripts": {
     "build": "vp pack",
-    "prepublishOnly": "vp run build",
-    "release": "bumpp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "vp run build"
   },
   "dependencies": {
     "vitepress": "2.0.0-alpha.17",

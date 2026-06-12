@@ -78,6 +78,9 @@ export default defineConfig({
       submodule: {
         command: "git submodule update --init --recursive --force",
       },
+      release: {
+        command: "vpx bumpp"
+      }
     },
   },
 });
