@@ -399,10 +399,12 @@
     color: var(--color-resume-text-2);
   }
 
-  .resume-experience-stack {
+  .resume-content .resume-experience-stack {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    align-items: center;
     gap: 0.25rem;
     margin: var(--space-xs) 0 0;
     padding: 0;
@@ -412,14 +414,11 @@
   .resume-stack-item {
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
+    justify-content: center;
     border-radius: var(--radius-resume);
     border: 1px solid var(--color-resume-divider);
     background-color: var(--color-resume-bg-mute);
-    padding: 1px 0.375rem;
-    font-size: 10.5px;
-    line-height: 1.25;
-    color: var(--color-resume-text-2);
+    padding: 0.25rem;
     transition: border-color 0.25s;
   }
 
@@ -428,13 +427,10 @@
   }
 
   .resume-stack-item__icon {
-    width: 12px;
-    height: 12px;
+    display: block;
+    width: 14px;
+    height: 14px;
     flex-shrink: 0;
-  }
-
-  .resume-stack-item__label {
-    line-height: 1.25;
   }
 
   .resume-experience-body {
@@ -539,7 +535,7 @@
       text-align: left;
     }
 
-    .resume-experience-stack {
+    .resume-content .resume-experience-stack {
       justify-content: flex-start;
       margin-top: 0;
     }

@@ -15,15 +15,13 @@ const showIcon = computed(() => !iconFailed.value);
 </script>
 
 <template>
-  <li class="resume-stack-item">
+  <li v-if="showIcon" class="resume-stack-item" :title="label">
     <img
-      v-if="showIcon"
       :src="iconUrl"
-      alt=""
+      :alt="label"
       class="resume-stack-item__icon"
       loading="lazy"
       decoding="async"
       @error="iconFailed = true" />
-    <span class="resume-stack-item__label">{{ label }}</span>
   </li>
 </template>
