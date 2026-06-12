@@ -9,7 +9,13 @@ const PACK_FOOTER = "/*! Built with love & coffee ☕ */";
 export default defineConfig({
   plugins: [tailwindcss()],
   lint: {
-    ignorePatterns: ["__snapshots__/**/*", "dist/**/*", "coverage/**/*", "themes/**/*"],
+    ignorePatterns: [
+      "__snapshots__/**/*",
+      "dist/**/*",
+      "coverage/**/*",
+      "themes/**/*",
+      ".agents/**/*",
+    ],
     options: {
       typeAware: true,
       typeCheck: true,
@@ -17,7 +23,13 @@ export default defineConfig({
   },
   fmt: {
     bracketSameLine: true,
-    ignorePatterns: ["__snapshots__/**/*", "dist/**/*", "coverage/**/*", "themes/**/*"],
+    ignorePatterns: [
+      "__snapshots__/**/*",
+      "dist/**/*",
+      "coverage/**/*",
+      "themes/**/*",
+      ".agents/**/*",
+    ],
     jsdoc: true,
     sortImports: true,
     sortTailwindcss: true,
@@ -56,8 +68,8 @@ export default defineConfig({
     tasks: {
       dev: {
         command: "vp run --filter ./demo docs:dev",
-        dependsOn: ["vitepress-theme-resume#build"]
-      }
-    }
-  }
+        dependsOn: ["vitepress-theme-resume#build"],
+      },
+    },
+  },
 });

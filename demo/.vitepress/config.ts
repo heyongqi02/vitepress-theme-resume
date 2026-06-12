@@ -9,6 +9,7 @@ export default defineConfig({
     lang: "zh-CN",
   }),
   vite: {
+    // @ts-ignore
     plugins: [tailwindcss()],
   },
 });

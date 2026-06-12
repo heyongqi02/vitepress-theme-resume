@@ -56,10 +56,7 @@ const metaItems = computed(() =>
     </p>
 
     <div v-if="profile.tags?.length" class="mt-4 flex flex-wrap gap-2">
-      <ResumeSkillTag
-        v-for="tag in profile.tags"
-        :key="tag.label"
-        :text="tag.label" />
+      <ResumeSkillTag v-for="tag in profile.tags" :key="tag.label" :text="tag.label" />
     </div>
   </header>
 </template>

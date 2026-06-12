@@ -28,7 +28,7 @@
   }
 
   .resume-skip-link:focus {
-    @apply translate-y-0 outline-none ring-2 ring-zinc-400 ring-offset-2;
+    @apply translate-y-0 ring-2 ring-zinc-400 ring-offset-2 outline-none;
   }
 
   .resume-meta-link {
@@ -37,7 +37,7 @@
 
   .resume-meta-link:focus-visible,
   .resume-content a:focus-visible {
-    @apply rounded-sm outline-none ring-2 ring-zinc-400 ring-offset-2;
+    @apply rounded-sm ring-2 ring-zinc-400 ring-offset-2 outline-none;
   }
 
   .resume-header h1 {
@@ -69,7 +69,7 @@
   }
 
   .resume-content .header-anchor:focus-visible {
-    @apply rounded-sm text-zinc-500 outline-none ring-2 ring-zinc-400 ring-offset-2;
+    @apply rounded-sm text-zinc-500 ring-2 ring-zinc-400 ring-offset-2 outline-none;
   }
 
   .resume-content ul {

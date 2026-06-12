@@ -14,7 +14,9 @@ Add the Tailwind Vite plugin in your VitePress config so utility classes in them
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  extends: defineResumeConfig({ /* ... */ }),
+  extends: defineResumeConfig({
+    /* ... */
+  }),
   vite: { plugins: [tailwindcss()] },
 });
 ```
@@ -70,22 +72,22 @@ profile:
 
 ## Frontmatter
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `resume` | `boolean` | Enable resume layout |
-| `profile.name` | `string` | Display name |
+| Field          | Type                   | Description                                   |
+| -------------- | ---------------------- | --------------------------------------------- |
+| `resume`       | `boolean`              | Enable resume layout                          |
+| `profile.name` | `string`               | Display name                                  |
 | `profile.meta` | `(string \| number)[]` | Contact info; email and phone are auto-linked |
-| `profile.tags` | `{ label: string }[]` | Skill or intent tags |
+| `profile.tags` | `{ label: string }[]`  | Skill or intent tags                          |
 
 ## Theme config
 
 `themeConfig.resume` options (via `defineResumeConfig`):
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `enabled` | `true` | Default resume mode when frontmatter omits `resume` |
-| `skipLinkLabel` | `跳到主内容` | Skip link text |
-| `profileDefaults` | — | Default profile fields merged with page frontmatter |
+| Option            | Default      | Description                                         |
+| ----------------- | ------------ | --------------------------------------------------- |
+| `enabled`         | `true`       | Default resume mode when frontmatter omits `resume` |
+| `skipLinkLabel`   | `跳到主内容` | Skip link text                                      |
+| `profileDefaults` | —            | Default profile fields merged with page frontmatter |
 
 ## Layout slots
 
@@ -105,11 +107,11 @@ export default {
 };
 ```
 
-| Slot | Position |
-|------|----------|
-| `page-before` / `page-after` | Outside the A4 page |
-| `header-before` / `header-after` | Around the profile header |
-| `content-before` / `content-after` | Around markdown body |
+| Slot                               | Position                  |
+| ---------------------------------- | ------------------------- |
+| `page-before` / `page-after`       | Outside the A4 page       |
+| `header-before` / `header-after`   | Around the profile header |
+| `content-before` / `content-after` | Around markdown body      |
 
 ## Markdown components
 

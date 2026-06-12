@@ -25,6 +25,11 @@ export interface ResumeThemeConfig {
   resume?: ResumeThemeOptions;
 }
 
+/** `theme` ref shape from `useData()` in theme components. */
+export interface ResumeThemeData {
+  resume?: ResumeThemeOptions;
+}
+
 export interface ResolvedResumeConfig {
   enabled: boolean;
   skipLinkLabel: string;

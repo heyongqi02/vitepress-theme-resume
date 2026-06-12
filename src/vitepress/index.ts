@@ -1,11 +1,6 @@
 import type { Theme } from "vitepress";
 
-import {
-  ResumeExperience,
-  ResumeHighlight,
-  ResumeHighlights,
-} from "../components";
-
+import { ResumeExperience, ResumeHighlight, ResumeHighlights } from "../components";
 import ResumeLayout from "./layouts/ResumeLayout.vue";
 
 const resumeMarkdownComponents = {
