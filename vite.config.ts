@@ -26,6 +26,7 @@ export default defineConfig({
     entry: {
       index: "src/index.ts",
       "markdown/experience": "src/markdown/experience.ts",
+      style: "src/index.css",
     },
     attw: {
       enabled: true,

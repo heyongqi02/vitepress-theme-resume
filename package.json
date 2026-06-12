@@ -22,7 +22,7 @@
     ".": "./dist/index.js",
     "./markdown/experience": "./dist/markdown/experience.js",
     "./package.json": "./package.json",
-    "./styles/resume.css": "./dist/styles/resume.css"
+    "./style.css": "./dist/style.css"
   },
   "publishConfig": {
     "repository": "https://registry.npmjs.org/",
