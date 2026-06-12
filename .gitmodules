@@ -4,3 +4,6 @@
 [submodule "themes/vitepress-theme-vuejs"]
 	path = themes/vitepress-theme-vuejs
 	url = https://github.com/vuejs/theme.git
+[submodule "themes/vitepress-theme-teek"]
+	path = themes/vitepress-theme-teek
+	url = https://github.com/Kele-Bingtang/vitepress-theme-teek.git
