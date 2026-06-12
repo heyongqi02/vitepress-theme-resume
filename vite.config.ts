@@ -33,6 +33,9 @@ export default defineConfig({
       packageJson: true,
       legacy: true,
     },
+    deps: {
+      onlyBundle: false
+    },
     footer: PACK_FOOTER,
     platform: "neutral",
     plugins: [ApiSnapshot(), Vue({ isProduction: true })],
