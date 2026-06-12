@@ -75,6 +75,10 @@ export default defineConfig({
         command: "vp run --filter ./demo docs:build",
         dependsOn: ["vitepress-theme-resume#build"],
       },
+      demo_preview: {
+        command: "vp run --filter ./demo docs:preview",
+        dependsOn: ["demo_build"],
+      },
       submodule: {
         command: "git submodule update --init --recursive --force",
       },
