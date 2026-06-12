@@ -15,7 +15,12 @@ const showIcon = computed(() => !iconFailed.value);
 </script>
 
 <template>
-  <li v-if="showIcon" class="resume-stack-item" :title="label">
+  <li
+    v-if="showIcon"
+    class="resume-stack-item"
+    :title="label"
+    tabindex="0"
+    :aria-label="label">
     <img
       :src="iconUrl"
       :alt="label"
