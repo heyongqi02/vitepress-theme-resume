@@ -1,13 +1,14 @@
 @import "tailwindcss";
+@import "simple-icons-font/font/simple-icons.min.css";
 
 @source "./**/*.{vue,ts,js}";
 
 @theme {
   --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
-  --color-resume-accent: oklch(0.35 0.03 250);
-  --color-resume-muted: oklch(0.55 0.01 250);
-  --color-resume-surface: oklch(0.99 0.002 250);
-  --color-resume-canvas: oklch(0.96 0.004 250);
+  --color-resume-accent: oklch(0.52 0.14 255);
+  --color-resume-muted: oklch(0.55 0.02 250);
+  --color-resume-surface: oklch(0.995 0.004 250);
+  --color-resume-canvas: oklch(0.965 0.012 255);
 }
 
 @layer base {
@@ -15,11 +16,10 @@
     font-family: var(--font-sans);
     @apply text-[13.5px] leading-[1.65] text-zinc-800 antialiased;
     background-color: var(--color-resume-canvas);
-    background-image: radial-gradient(
-      ellipse 80% 50% at 50% -10%,
-      oklch(0.94 0.008 250 / 0.6),
-      transparent
-    );
+    background-image:
+      radial-gradient(ellipse 70% 45% at 10% -5%, oklch(0.88 0.08 255 / 0.35), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 95% 0%, oklch(0.9 0.07 145 / 0.28), transparent 50%),
+      radial-gradient(ellipse 50% 35% at 50% 100%, oklch(0.92 0.06 330 / 0.18), transparent 55%);
   }
 
   body {
@@ -29,21 +29,37 @@
 
 @layer components {
   .resume-content h2 {
-    @apply relative mt-8 mb-4 pb-2 text-[15px] font-bold tracking-tight text-zinc-900;
-  }
-
-  .resume-content h2::after {
-    content: "";
-    @apply absolute bottom-0 left-0 h-0.5 w-7 rounded-full bg-slate-800;
+    @apply relative mt-8 mb-4 flex items-center gap-2 pb-2 text-[15px] font-bold tracking-tight text-zinc-900;
   }
 
   .resume-content h2::before {
     content: "";
-    @apply absolute right-0 bottom-0 left-0 h-px bg-zinc-200;
+    @apply size-2 shrink-0 rounded-full bg-violet-500;
+  }
+
+  .resume-content h2::after {
+    content: "";
+    @apply absolute right-0 bottom-0 left-0 h-px bg-gradient-to-r from-zinc-200 via-zinc-200/40 to-transparent;
   }
 
   .resume-content h2:first-child {
     @apply mt-0;
+  }
+
+  .resume-content h2:nth-of-type(4n + 1)::before {
+    @apply bg-sky-500;
+  }
+
+  .resume-content h2:nth-of-type(4n + 2)::before {
+    @apply bg-emerald-500;
+  }
+
+  .resume-content h2:nth-of-type(4n + 3)::before {
+    @apply bg-amber-500;
+  }
+
+  .resume-content h2:nth-of-type(4n + 4)::before {
+    @apply bg-violet-500;
   }
 
   .resume-content .header-anchor {
@@ -60,7 +76,7 @@
 
   .resume-content ul > li::before {
     content: "";
-    @apply absolute top-[0.62em] left-0 h-1 w-1 rounded-full bg-slate-400;
+    @apply absolute top-[0.62em] left-0 size-1.5 rounded-full bg-gradient-to-br from-sky-400 to-violet-500;
   }
 
   .resume-content ol {
@@ -73,7 +89,7 @@
 
   .resume-content ol > li::before {
     content: counter(list-item) ".";
-    @apply absolute top-0 left-0 text-xs font-semibold text-slate-500 tabular-nums;
+    @apply absolute top-0 left-0 text-xs font-semibold text-violet-600 tabular-nums;
   }
 }
 
@@ -86,6 +102,10 @@
   .resume-content h2,
   .resume-experience {
     break-inside: avoid;
+  }
+
+  .si--color::before {
+    color: inherit !important;
   }
 
   @page {

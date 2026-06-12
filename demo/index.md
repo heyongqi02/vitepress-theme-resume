@@ -7,11 +7,18 @@ profile:
     - 年龄：23岁
     - 13520368086
     - hi@bjmhe.me
-  intent:
-    - 2年工作经验
-    - 求职意向：前端开发工程师
-    - 期望薪资：25-35K
-    - 期望城市：上海
+  tags:
+    - label: 前端开发工程师
+      icon: vuedotjs
+      tone: emerald
+    - label: 工程化与构建
+      icon: vite
+      tone: violet
+    - label: 开源与技术输出
+      icon: github
+      tone: sky
+    - label: 期望城市：上海
+      tone: rose
 ---
 
 ## 个人优势
@@ -26,7 +33,7 @@ profile:
 
 ## 工作经历
 
-<ResumeExperience period="2024.06-至今">
+<ResumeExperience period="2024.06-至今" stack="react,vuedotjs,vite,jdcom" accent="emerald">
 
 **北京京东世纪贸易有限公司** 软件开发工程师(前端)
 
@@ -42,7 +49,7 @@ profile:
 
 </ResumeExperience>
 
-<ResumeExperience period="2023.07-2024.02">
+<ResumeExperience period="2023.07-2024.02" stack="vuedotjs,webpack" accent="sky">
 
 **江苏群杰物联科技有限公司** 前端开发工程师
 
@@ -59,7 +66,7 @@ profile:
 
 ## 实习经历
 
-<ResumeExperience period="2023.02-2023.07">
+<ResumeExperience period="2023.02-2023.07" stack="vuedotjs" accent="cyan">
 
 **江苏汇鑫融智软件科技有限公司** 前端开发工程师
 
@@ -69,7 +76,7 @@ profile:
 
 ## 项目经历
 
-<ResumeExperience period="2024.07-至今">
+<ResumeExperience period="2024.07-至今" stack="react,typescript,vite" accent="violet">
 
 **外卖商家中心** 财务模块负责人
 
@@ -83,7 +90,7 @@ profile:
 
 </ResumeExperience>
 
-<ResumeExperience period="2024.06-2024.07">
+<ResumeExperience period="2024.06-2024.07" stack="react,taro" accent="amber">
 
 **商品榜单** 项目开发人员
 
@@ -97,7 +104,7 @@ profile:
 
 ## 教育经历
 
-<ResumeExperience period="2020-2024">
+<ResumeExperience period="2020-2024" accent="rose">
 
 **南京邮电大学** 本科 生物医学工程
 
