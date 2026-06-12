@@ -29,9 +29,6 @@
   },
   "devDependencies": {
     "@arethetypeswrong/core": "^0.18.3",
-    "@bjmhe/automd": "^0.0.7",
-    "@bjmhe/bjmhe": "^1.0.2",
-    "@bjmhe/viteplus-preset": "^2.0.10",
     "@tailwindcss/vite": "^4.3.0",
     "@tsconfig/node24": "^24.0.4",
     "@tsdown/css": "^0.22.2",
