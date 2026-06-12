@@ -121,9 +121,13 @@
     @apply absolute top-0 left-0 text-xs font-medium text-zinc-500 tabular-nums;
   }
 
-  /* Experience block rhythm */
+  /* Experience: title row (2-col) + full-width highlights below */
   .resume-experience {
     margin-bottom: var(--space-lg);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: var(--space-lg);
+    row-gap: var(--space-sm);
     @apply break-inside-avoid;
   }
 
@@ -132,20 +136,24 @@
   }
 
   .resume-experience-period {
-    float: right;
-    clear: right;
-    max-width: 42%;
-    margin-left: var(--space-lg);
-    margin-bottom: var(--space-xs);
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    max-width: 8.5rem;
     @apply text-right;
   }
 
   .resume-experience-body {
-    @apply flow-root text-zinc-600;
+    display: contents;
+    @apply text-zinc-600;
   }
 
   .resume-experience-body > p:first-child {
-    margin-bottom: var(--space-sm);
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    min-width: 0;
+    padding-right: var(--space-sm);
     @apply text-[13px] leading-snug font-medium text-zinc-900;
   }
 
@@ -153,8 +161,15 @@
     @apply font-semibold;
   }
 
-  .resume-experience-body .resume-highlights {
-    margin-top: var(--space-sm);
+  .resume-experience-body > .resume-highlights,
+  .resume-experience-body > .resume-highlight {
+    grid-column: 1 / -1;
+  }
+
+  .resume-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
   }
 }
 

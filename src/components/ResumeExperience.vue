@@ -26,7 +26,7 @@ const stackLabel = computed(() =>
       </p>
     </div>
     <div
-      class="resume-experience-body [&_.resume-highlights]:max-w-none [&_strong]:font-medium [&_strong]:text-zinc-900 [&>p]:m-0 [&>p+p]:mt-2">
+      class="resume-experience-body [&_strong]:font-medium [&_strong]:text-zinc-900 [&>p]:m-0 [&>p+p]:mt-2">
       <slot />
     </div>
   </section>
