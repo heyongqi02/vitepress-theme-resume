@@ -71,6 +71,10 @@ body {
   margin-top: 0;
 }
 
+.resume-content .header-anchor {
+  display: none;
+}
+
 .resume-content ul,
 .resume-content ol {
   margin: 0;
