@@ -21,7 +21,7 @@ profile:
 
 - 掌握 JS / TS / HTML / CSS，具备 Vue、React、Taro 业务开发经验，日常使用 TS 约束类型与编码规范。
 - 熟悉 Webpack、Vite、Rspack 配置与插件开发，具备前端工程化与打包编译经验。
-- 熟练使用 Git、Figma、 CI/CD、Docker、Linux 等工具，具备 Rust 与 Node 原生插件基础。
+- 熟练使用 Git、Figma、CI/CD、Docker、Linux 等工具，具备 Rust 与 Node 原生插件基础。
 - 善用 AI 辅助编码、排查问题、方案调研与文档撰写，持续关注 Vue、Vite 等开源生态并参与贡献。
 - 长期坚持技术博客输出，累计发布 100+ 篇，总阅读量 21w+。
 

@@ -29,8 +29,8 @@ const brands = computed(() => parseBrandStack(props.stack));
         <span
           v-for="slug in brands"
           :key="slug"
-          class="inline-flex size-5 items-center justify-center opacity-80 grayscale print:opacity-100 print:grayscale-0">
-          <ResumeBrandIcon :slug="slug" size="sm" />
+          class="inline-flex size-5 items-center justify-center opacity-70">
+          <ResumeBrandIcon :slug="slug" size="sm" :color="false" />
         </span>
       </span>
     </div>
