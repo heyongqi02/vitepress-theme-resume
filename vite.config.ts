@@ -27,7 +27,10 @@ export default defineConfig({
       index: "src/index.ts",
       "markdown/experience": "src/markdown/experience.ts",
     },
-    attw: true,
+    attw: {
+      enabled: true,
+      profile: "esm-only",
+    },
     banner: PACK_BANNER,
     devtools: true,
     dts: {
