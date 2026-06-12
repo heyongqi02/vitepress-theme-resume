@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   title: "贺永琪",
@@ -6,5 +7,9 @@ export default defineConfig({
   themeConfig: {
     sidebar: [],
     nav: [],
+  },
+  vite: {
+    // @ts-ignore
+    plugins: [tailwindcss()]
   }
 });
