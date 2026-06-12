@@ -206,17 +206,6 @@ import { useResume } from "vitepress-theme-resume";
 const { config, isResumeMode, profile } = useResume();
 ```
 
-## Development
-
-This repo uses [vite-plus](https://github.com/heyongqi02/vite-plus) and a `demo` workspace package.
-
-```bash
-pnpm install
-pnpm exec vp run demo_dev    # build theme + start demo dev server
-pnpm exec vp run demo_build  # build theme + demo site
-pnpm run build               # build theme package only
-```
-
 ## License
 
 Published under the [Apache-2.0](./LICENSE) license.
