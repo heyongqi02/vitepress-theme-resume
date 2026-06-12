@@ -1,4 +1,3 @@
-import { lib } from "@bjmhe/viteplus-preset";
 import tailwindcss from "@tailwindcss/vite";
 import ApiSnapshot from "tsnapi/rolldown";
 import Vue from "unplugin-vue/rolldown";
