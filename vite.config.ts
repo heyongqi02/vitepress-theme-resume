@@ -9,7 +9,7 @@ const PACK_FOOTER = "/*! Built with love & coffee ☕ */";
 export default defineConfig({
   plugins: [tailwindcss()],
   lint: {
-    ignorePatterns: ["__snapshots__/**/*", "dist/**/*", "coverage/**/*"],
+    ignorePatterns: ["__snapshots__/**/*", "dist/**/*", "coverage/**/*", "themes/**/*"],
     options: {
       typeAware: true,
       typeCheck: true,
@@ -17,7 +17,7 @@ export default defineConfig({
   },
   fmt: {
     bracketSameLine: true,
-    ignorePatterns: ["__snapshots__/**/*", "dist/**/*", "coverage/**/*"],
+    ignorePatterns: ["__snapshots__/**/*", "dist/**/*", "coverage/**/*", "themes/**/*"],
     jsdoc: true,
     sortImports: true,
     sortTailwindcss: true,
