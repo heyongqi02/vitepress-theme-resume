@@ -1,2 +1,6 @@
+@import "tailwindcss";
+
+@source "../**/*.{vue,ts,js}";
+
 @import "./tokens.css";
 @import "./content.css";
