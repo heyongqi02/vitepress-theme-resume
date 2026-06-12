@@ -51,4 +51,12 @@ export default defineConfig({
     sourcemap: true,
     unused: true,
   },
+  run: {
+    tasks: {
+      demoDev: {
+        command: "vp run --filter ./demo docs:dev",
+        dependsOn: ["vitepress-theme-resume#build"]
+      }
+    }
+  }
 });
