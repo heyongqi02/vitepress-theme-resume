@@ -44,7 +44,7 @@ const brands = computed(() => parseBrandStack(props.stack));
       </span>
     </div>
     <div
-      class="resume-experience-body text-zinc-600 [&>p:first-child]:mb-2.5 [&>p:first-child]:max-w-[calc(100%-5.5rem)] [&>p:first-child]:text-[13.5px] [&>p:first-child]:font-semibold [&>p:first-child]:leading-snug [&>p:first-child]:text-zinc-900 [&>p]:mb-1.5 [&_strong]:font-semibold [&_strong]:text-zinc-900">
+      class="resume-experience-body text-zinc-600 [&>p:first-child]:mb-3 [&>p:first-child]:max-w-[calc(100%-5.5rem)] [&>p:first-child]:text-[13.5px] [&>p:first-child]:font-semibold [&>p:first-child]:leading-snug [&>p:first-child]:text-zinc-900 [&>p]:mb-1.5 [&_strong]:font-semibold [&_strong]:text-zinc-900 [&_.resume-highlights]:max-w-none">
       <slot />
     </div>
   </div>

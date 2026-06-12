@@ -23,13 +23,11 @@ profile:
 
 ## 个人优势
 
-- 掌握 JS、TS、HTML、CSS 等前端核心技能，具备 Vue、React、Taro 框架的业务开发经验，遵循编码规范，日常使用 TS 进行类型约束开发；
-- 熟悉 Webpack、Vite、Rspack 的配置与插件开发，具备前端工程化与打包编译相关知识；
-- 具备 Rust 基础编码能力，了解 Node.js 原生插件相关知识；
-- 熟练使用 Git、抓包调试、Figma、CI/CD 以及各类 Lint 工具，具备 Linux、Docker、Vim、Nginx 的基础操作能力；
-- 能够高效利用 AI 工具辅助编码、问题排查、方案调研与文档撰写，提升研发效率；
-- 持续关注前端开源技术动态，参与 Vue、Vite 开源项目贡献；
-- 长期坚持技术博客输出，累计发布 100+ 篇，总阅读量达 21w+。
+- 掌握 JS / TS / HTML / CSS，具备 Vue、React、Taro 业务开发经验，日常使用 TS 约束类型与编码规范。
+- 熟悉 Webpack、Vite、Rspack 配置与插件开发，具备前端工程化与打包编译经验。
+- 熟练使用 Git、Figma、CI/CD、Docker、Linux 等工具，具备 Rust 与 Node 原生插件基础。
+- 善用 AI 辅助编码、排查问题、方案调研与文档撰写，持续关注 Vue、Vite 等开源生态并参与贡献。
+- 长期坚持技术博客输出，累计发布 100+ 篇，总阅读量 21w+。
 
 ## 工作经历
 
@@ -37,15 +35,39 @@ profile:
 
 **北京京东世纪贸易有限公司** 软件开发工程师(前端)
 
-1. 负责外卖商家后台财务系统前端开发，全程承接需求对接、功能迭代、线上运维及报表性能优化工作，保障财务业务稳定落地。
-2. 依托AI辅助梳理复杂财务计算逻辑、封装通用业务组件，简化重复开发工作，高效配合前后端协作，保障财务数据准确、系统平稳运行。
-3. 参与消费者端秒送门跨端小程序研发，配合团队完成功能迭代与页面细节优化，持续打磨交互效果，保障用户使用体验流畅。
-4. 使用React技术栈开发各类营销活动H5页面，参与页面加载速度、交互效果优化，借助AI参考优质开发方案，提升项目迭代效率。
-5. 采用Vue技术栈参与后台管理系统、聚合中心的搭建与迭代，负责运费计算、互动游戏、数据看板等模块的开发及日常维护。
-6. 参与前端代码评审工作，落地统一编码规范，从打包优化、页面渲染、组件复用等维度优化项目性能，持续提升系统运行效率。
-7. 熟练运用AI工具排查疑难问题、优化代码逻辑，精简冗余代码，有效提升问题排查效率与项目交付质量。
-8. 常态化对接产品、设计团队对齐需求与设计规范，高效协同完成功能落地与版本迭代，保障开发成果贴合业务标准。
-9. 积极参与团队技术分享与技术研讨，持续学习前端前沿技术与工具，依托AI搜集整理技术资料，沉淀技术经验，助力团队整体研发能力提升。
+<ResumeHighlights>
+
+<ResumeHighlight icon="wallet" title="财务系统交付" tone="emerald">
+
+承接商家后台财务模块需求、迭代与线上运维，聚焦报表性能优化，保障核心财务业务稳定落地。
+
+</ResumeHighlight>
+
+<ResumeHighlight icon="modules" title="组件与业务抽象" tone="violet">
+
+梳理复杂财务计算逻辑，沉淀报表、账单、筛选等通用组件，减少重复开发并提升前后端协作效率。
+
+</ResumeHighlight>
+
+<ResumeHighlight icon="mobile" title="跨端与营销页" tone="sky">
+
+参与秒送门跨端小程序迭代，使用 React 交付营销活动 H5，持续优化交互细节与页面加载体验。
+
+</ResumeHighlight>
+
+<ResumeHighlight icon="perf" title="性能与工程规范" tone="amber">
+
+推动代码评审与统一规范，从打包、渲染、组件复用等维度优化性能，并用 AI 辅助排查疑难问题。
+
+</ResumeHighlight>
+
+<ResumeHighlight icon="team" title="跨职能协作" tone="cyan">
+
+对接产品、设计对齐需求与视觉规范，参与技术分享与资料沉淀，支持团队高效迭代交付。
+
+</ResumeHighlight>
+
+</ResumeHighlights>
 
 </ResumeExperience>
 
@@ -53,14 +75,27 @@ profile:
 
 **江苏群杰物联科技有限公司** 前端开发工程师
 
-1. 负责公司政务版小程序的前端开发工作，从零开始构建并持续优化产品功能。
-2. 使用Vue框架实现小程序的动态界面交互，确保用户体验流畅且直观。
-3. 定期对小程序进行功能更新和技术迭代，保持产品的市场竞争力。
-4. 负责公司后台管理系统的日常维护，及时发现并修复系统中的各类问题。
-5. 针对后台系统的性能进行优化，提高系统的响应速度和处理效率。
-6. 与团队紧密合作，确保前后端数据交互的准确性和稳定性。
-7. 参与前端技术研究，探索并实践新的前端开发技术和工具。
-8. 编写清晰、规范的代码，并撰写相应的技术文档，便于团队成员理解和维护。
+<ResumeHighlights>
+
+<ResumeHighlight icon="mobile" title="政务小程序" tone="sky">
+
+从零搭建政务版小程序，使用 Vue 完成动态交互与功能迭代，保障多端体验稳定可用。
+
+</ResumeHighlight>
+
+<ResumeHighlight icon="engineering" title="后台系统维护" tone="emerald">
+
+负责后台管理系统日常维护与性能优化，及时修复问题并提升响应速度与数据处理稳定性。
+
+</ResumeHighlight>
+
+<ResumeHighlight icon="team" title="协作与文档" tone="violet">
+
+配合后端完成数据联调，编写规范代码与技术文档，推动前端新技术在团队内落地。
+
+</ResumeHighlight>
+
+</ResumeHighlights>
 
 </ResumeExperience>
 
@@ -70,7 +105,11 @@ profile:
 
 **江苏汇鑫融智软件科技有限公司** 前端开发工程师
 
-1. 二次开发公司低代码平台搭建的后台管理页面
+<ResumeHighlight icon="code" title="低代码二次开发" tone="cyan">
+
+基于公司低代码平台二次开发后台管理页面，快速交付业务表单与列表场景。
+
+</ResumeHighlight>
 
 </ResumeExperience>
 
@@ -80,13 +119,33 @@ profile:
 
 **外卖商家中心** 财务模块负责人
 
-1. 主导财务系统前端架构规范化建设，统一项目组件开发标准，采用楼层化、模块化思想拆分页面结构，解决旧项目代码冗余、耦合严重问题，提升项目可维护性。
-2. 针对财务类高频复用场景，独立拓展、迭代公共组件库，沉淀报表、账单、筛选等通用组件，大幅提升团队页面搭建效率。
-3. 解决后台多设备展示适配问题，针对性修复不同分辨率、浏览器的样式兼容BUG，统一系统展示样式，保障后台操作体验一致性。
-4. 严格落地视觉还原标准，配合业务埋点体系建设，接入第三方监控SDK，实现页面异常、接口报错、用户行为的全量上报与追溯。
-5. 专项优化大数据报表渲染瓶颈，通过接口预加载、离线缓存策略、CDN静态资源优化等方案，解决页面白屏、加载卡顿问题，显著提升系统响应速度。
-6. 参与项目代码质量建设，梳理前端开发规范，开展代码自查与优化，精简冗余逻辑，提升项目整体稳定性与运行性能。
-7. 善用AI辅助技术方案选型、重构老旧代码、优化复杂逻辑写法，高效完成项目迭代与技术优化，持续提升工程研发质量。
+<ResumeHighlights>
+
+<ResumeHighlight icon="architecture" title="架构规范化" tone="violet">
+
+主导财务前端架构治理，采用楼层化、模块化拆分页面，解决旧项目冗余与耦合问题。
+
+</ResumeHighlight>
+
+<ResumeHighlight icon="modules" title="组件库沉淀" tone="emerald">
+
+拓展报表、账单、筛选等高频组件，统一开发标准并提升团队页面搭建效率。
+
+</ResumeHighlight>
+
+<ResumeHighlight icon="perf" title="报表性能优化" tone="amber">
+
+通过预加载、离线缓存与 CDN 优化大数据报表渲染，显著改善白屏与加载卡顿。
+
+</ResumeHighlight>
+
+<ResumeHighlight icon="quality" title="质量与监控" tone="sky">
+
+落地视觉还原与埋点监控体系，接入第三方 SDK，实现异常、接口与行为全量上报。
+
+</ResumeHighlight>
+
+</ResumeHighlights>
 
 </ResumeExperience>
 
@@ -94,11 +153,21 @@ profile:
 
 **商品榜单** 项目开发人员
 
-1. 严格遵循团队代码规范，模块化开发楼层化页面组件，提升项目复用性与可维护性。
-2. 结合实际业务需求，合理设计技术方案，迭代拓展公共组件功能，适配多样化业务场景。
-3. 依托Taro框架原生API处理多端适配逻辑，解决不同手机设备的样式兼容性问题，统一多端展示效果。
-4. 严格按照UI设计稿100%还原页面样式，引入第三方SDK完成数据埋点与页面监控上报工作。
-5. 通过接口预加载、离线缓存、CDN加速等多种方式优化页面加载速度与整体渲染性能，提升用户体验。
+<ResumeHighlights>
+
+<ResumeHighlight icon="modules" title="楼层化组件" tone="amber">
+
+模块化开发页面楼层组件，结合业务场景迭代公共组件，提升复用性与可维护性。
+
+</ResumeHighlight>
+
+<ResumeHighlight icon="mobile" title="多端适配" tone="sky">
+
+处理多端样式兼容与 UI 还原，完成埋点监控接入并优化加载与渲染性能。
+
+</ResumeHighlight>
+
+</ResumeHighlights>
 
 </ResumeExperience>
 
