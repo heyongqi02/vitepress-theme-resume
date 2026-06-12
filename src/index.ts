@@ -1,3 +1,5 @@
+import "./styles/deps";
+
 export { default, ResumeTheme } from "./vitepress";
 export {
   ResumeExperience,
