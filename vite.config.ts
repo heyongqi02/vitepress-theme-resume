@@ -1,23 +1,46 @@
 import { lib } from "@bjmhe/viteplus-preset";
 import tailwindcss from "@tailwindcss/vite";
+import ApiSnapshot from "tsnapi/rolldown";
 import Vue from "unplugin-vue/rolldown";
+import { defineConfig } from "vite-plus";
 
-export default lib(
-  {},
-  {
-    // @ts-ignore
-    plugins: [
-      // @ts-ignore
-      tailwindcss(),
-    ],
-    run: {
-      tasks: {
-        autofix: ["vpx automd", "vpx bjmhe fetch", "vp check --fix"],
-      },
-    },
-    pack: {
-      plugins: [Vue({ isProduction: true })],
-      dts: { vue: true, tsgo: false },
+const PACK_BANNER = "/*! Keep it simple, keep it free */";
+const PACK_FOOTER = "/*! Built with love & coffee ☕ */";
+
+export default defineConfig({
+  plugins: [tailwindcss()],
+  lint: {
+    ignorePatterns: ["__snapshots__/**/*", "dist/**/*", "coverage/**/*"],
+    options: {
+      typeAware: true,
+      typeCheck: true,
     },
   },
-);
+  fmt: {
+    bracketSameLine: true,
+    ignorePatterns: ["__snapshots__/**/*", "dist/**/*", "coverage/**/*"],
+    jsdoc: true,
+    sortImports: true,
+    sortTailwindcss: true,
+  },
+  pack: {
+    attw: true,
+    banner: PACK_BANNER,
+    devtools: true,
+    dts: {
+      vue: true,
+    },
+    exports: {
+      packageJson: true,
+      legacy: true,
+    },
+    footer: PACK_FOOTER,
+    platform: "neutral",
+    plugins: [ApiSnapshot(), Vue({ isProduction: true })],
+    publint: true,
+    shims: true,
+    sourcemap: true,
+    unbundle: true,
+    unused: true,
+  },
+});
