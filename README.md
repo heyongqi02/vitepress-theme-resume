@@ -219,4 +219,9 @@ pnpm run build               # build theme package only
 
 ## License
 
-Apache-2.0
+Published under the [Apache-2.0](./LICENSE) license.
+Made by [@heyongqi02](https://github.com/heyongqi02) and [community](https://github.com/heyongqi02/vitepress-theme-resume/graphs/contributors) 💛
+<br><br>
+<a href="https://github.com/heyongqi02/vitepress-theme-resume/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=heyongqi02/vitepress-theme-resume&anon=true" />
+</a>
