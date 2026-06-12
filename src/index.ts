@@ -10,4 +10,4 @@ export default {
   },
 } satisfies Theme;
 
-export type { ResumeProfile, ResumeFrontmatter } from "./types";
+export type { ResumeProfile, ResumeFrontmatter, ResumeProfileTag, SkillTagTone } from "./types";

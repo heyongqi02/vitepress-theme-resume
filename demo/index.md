@@ -33,7 +33,7 @@ profile:
 
 ## 工作经历
 
-<ResumeExperience period="2024.06-至今" stack="react,vuedotjs,vite,jdcom" accent="emerald">
+<ResumeExperience period="2024.06-至今" stack="react,vuedotjs,vite,docker" accent="emerald">
 
 **北京京东世纪贸易有限公司** 软件开发工程师(前端)
 
@@ -90,7 +90,7 @@ profile:
 
 </ResumeExperience>
 
-<ResumeExperience period="2024.06-2024.07" stack="react,taro" accent="amber">
+<ResumeExperience period="2024.06-2024.07" stack="react,typescript" accent="amber">
 
 **商品榜单** 项目开发人员
 
