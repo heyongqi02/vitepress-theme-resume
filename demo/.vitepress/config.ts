@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { experienceContainer } from "vitepress-theme-resume";
+import { experienceContainer } from "vitepress-theme-resume/markdown/experience";
 
 export default defineConfig({
   title: "贺永琪",

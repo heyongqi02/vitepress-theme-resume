@@ -23,6 +23,10 @@ export default defineConfig({
     sortTailwindcss: true,
   },
   pack: {
+    entry: {
+      index: "src/index.ts",
+      "markdown/experience": "src/markdown/experience.ts",
+    },
     attw: true,
     banner: PACK_BANNER,
     devtools: true,

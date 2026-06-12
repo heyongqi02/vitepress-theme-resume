@@ -18,6 +18,7 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
+    "./markdown/experience": "./dist/markdown/experience.js",
     "./package.json": "./package.json",
     "./styles/resume.css": "./dist/styles/resume.css"
   },
