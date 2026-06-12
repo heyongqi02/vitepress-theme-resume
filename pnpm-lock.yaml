@@ -226,9 +226,6 @@ importers:
       '@tsdown/css':
         specifier: 0.22.1
         version: 0.22.1(jiti@2.7.0)(postcss@8.5.15)(tsdown@0.22.1)(yaml@2.9.0)
-      '@types/markdown-it':
-        specifier: ^14.1.2
-        version: 14.1.2
       '@types/node':
         specifier: ^24.13.2
         version: 24.13.2

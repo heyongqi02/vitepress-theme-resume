@@ -1,7 +1,7 @@
 import type { Theme } from "vitepress";
 
-import ResumeExperience from "./components/ResumeExperience.vue";
-import Layout from "./Layout.vue";
+import Layout from "./layouts/Layout.vue";
+import ResumeExperience from "./sections/ResumeExperience.vue";
 
 export default {
   Layout,

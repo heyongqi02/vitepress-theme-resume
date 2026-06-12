@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useData } from "vitepress";
 
-import ResumeHeader from "./components/ResumeHeader.vue";
-import ResumePage from "./components/ResumePage.vue";
-import type { ResumeFrontmatter } from "./types";
+import ResumePage from "./ResumePage.vue";
+import ResumeHeader from "../sections/ResumeHeader.vue";
+import type { ResumeFrontmatter } from "../types";
 
 const { frontmatter } = useData<ResumeFrontmatter>();
 </script>
