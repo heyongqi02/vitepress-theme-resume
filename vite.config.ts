@@ -30,6 +30,7 @@ export default defineConfig({
     },
     attw: {
       enabled: true,
+      ignoreRules: ["no-resolution"],
       profile: "esm-only",
     },
     banner: PACK_BANNER,
