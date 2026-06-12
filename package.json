@@ -1,25 +1,32 @@
 {
   "name": "vitepress-theme-resume",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "A VitePress theme for creating resumes",
+  "license": "Apache-2.0",
+  "author": "Yongqi He <hi@heyongqi.me>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyongqi02/vitepress-theme-resume.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "publishConfig": {
+    "repository": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "prepublishOnly": "vp run build",
+    "release": "bumpp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.3.0",
-      "onFail": "download"
-    }
-  },
-  "type": "module",
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.0",
     "@tsconfig/node24": "^24.0.4",
@@ -33,6 +40,21 @@
     "tailwindcss": "^4.3.0",
     "vite-plus": "^0.1.24",
     "vitepress": "^1.6.4",
-    "vue": "^3.5.38"
-  }
+    "vue": "^3.5.38",
+    "@arethetypeswrong/core": "^0.18.3",
+    "@bjmhe/automd": "^0.0.7",
+    "@bjmhe/bjmhe": "^1.0.2",
+    "@bjmhe/viteplus-preset": "^2.0.10",
+    "@typescript/native-preview": "7.0.0-dev.20260603.1",
+    "@vitest/coverage-v8": "^4.1.8",
+    "bumpp": "^11.1.0",
+    "publint": "^0.3.21",
+    "tsnapi": "^0.3.3",
+    "typescript": "^6.0.3",
+    "unplugin-unused": "^0.5.7"
+  },
+  "engines": {
+    "node": ">=24.16.0"
+  },
+  "packageManager": "pnpm@11.4.0"
 }
