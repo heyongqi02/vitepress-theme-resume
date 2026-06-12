@@ -37,7 +37,7 @@ export default defineConfig({
   pack: {
     entry: {
       index: "src/index.ts",
-      config: "src/config/index.ts",
+      config: "src/config.ts",
       style: "src/styles/index.css",
     },
     attw: {

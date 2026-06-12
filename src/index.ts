@@ -1,8 +1,10 @@
 import "./styles/deps";
 
-export { default, ResumeTheme } from "./vitepress";
-export { ResumeExperience, ResumeHighlight, ResumeHighlights, ResumeSkillTag } from "./components";
-export { useResume } from "./vitepress/use-resume";
+export { default, ResumeTheme } from "./theme";
+export { default as ResumeExperience } from "./components/ResumeExperience.vue";
+export { default as ResumeHighlight } from "./components/ResumeHighlight.vue";
+export { default as ResumeHighlights } from "./components/ResumeHighlights.vue";
+export { useResume } from "./use-resume";
 export { defineResumeConfig, baseConfig, defaultResumeThemeOptions } from "./config";
 export type {
   ResolvedResumeConfig,

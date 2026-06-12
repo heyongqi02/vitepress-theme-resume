@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useResume } from "../use-resume";
 import ResumeHeader from "./ResumeHeader.vue";
-import ResumePage from "./ResumePage.vue";
 
 const { config, isResumeMode } = useResume();
 </script>
@@ -12,7 +11,7 @@ const { config, isResumeMode } = useResume();
 
     <template v-if="isResumeMode">
       <slot name="page-before" />
-      <ResumePage>
+      <article class="resume-page print:m-0 print:max-w-none print:px-0 print:py-0">
         <slot name="header-before" />
         <ResumeHeader />
         <slot name="header-after" />
@@ -21,7 +20,7 @@ const { config, isResumeMode } = useResume();
           <Content />
           <slot name="content-after" />
         </main>
-      </ResumePage>
+      </article>
       <slot name="page-after" />
     </template>
 

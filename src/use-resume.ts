@@ -1,11 +1,11 @@
 import { useData } from "vitepress";
 import { computed } from "vue";
 
-import { resolveResumeConfig } from "../config/resolve";
-import type { ResumeFrontmatter, ResumeThemeData } from "../types";
+import { resolveResumeConfig } from "./config";
+import type { ResumeFrontmatter, ResumeThemeOptions } from "./types";
 
 export function useResume() {
-  const { frontmatter, theme } = useData<ResumeThemeData>();
+  const { frontmatter, theme } = useData<{ resume?: ResumeThemeOptions }>();
   const config = computed(() =>
     resolveResumeConfig(theme.value.resume, frontmatter.value as ResumeFrontmatter),
   );

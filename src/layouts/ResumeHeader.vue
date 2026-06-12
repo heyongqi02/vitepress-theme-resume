@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-import ResumeSkillTag from "../../components/ResumeSkillTag.vue";
 import { useResume } from "../use-resume";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -51,7 +50,9 @@ const metaItems = computed(() =>
     <p v-if="profile.tags?.length" class="resume-header-tags">
       <template v-for="(tag, index) in profile.tags" :key="tag.label">
         <span v-if="index > 0" class="resume-header-meta-separator" aria-hidden="true" />
-        <ResumeSkillTag :primary="index === 0" :text="tag.label" />
+        <span class="resume-header-tag" :class="{ 'resume-header-tag--lead': index === 0 }">
+          {{ tag.label }}
+        </span>
       </template>
     </p>
   </header>

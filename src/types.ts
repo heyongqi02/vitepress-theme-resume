@@ -5,8 +5,6 @@ export interface ResumeProfileTag {
 export interface ResumeProfile {
   name: string;
   meta?: Array<string | number>;
-  /** @deprecated Use `tags` instead. Resolved automatically at runtime. */
-  intent?: Array<string | number>;
   tags?: ResumeProfileTag[];
 }
 
@@ -22,11 +20,6 @@ export interface ResumeThemeOptions {
 }
 
 export interface ResumeThemeConfig {
-  resume?: ResumeThemeOptions;
-}
-
-/** `theme` ref shape from `useData()` in theme components. */
-export interface ResumeThemeData {
   resume?: ResumeThemeOptions;
 }
 

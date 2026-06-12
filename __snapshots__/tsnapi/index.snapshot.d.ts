@@ -10,10 +10,9 @@ export declare function useResume(): {
 // #endregion
 
 // #region Variables
-export declare const ResumeExperience: typeof __VLS_export$3;
-export declare const ResumeHighlight: typeof __VLS_export$2;
-export declare const ResumeHighlights: typeof __VLS_export$1;
-export declare const ResumeSkillTag: typeof __VLS_export;
+export declare const ResumeExperience: typeof __VLS_export$2;
+export declare const ResumeHighlight: typeof __VLS_export$1;
+export declare const ResumeHighlights: typeof __VLS_export;
 export declare const ResumeTheme: {
   Layout: {
     new (...args: any[]): import("vue").CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").PublicProps, {}, true, {}, {}, import("vue").GlobalComponents, import("vue").GlobalDirectives, string, {}, any, import("vue").ComponentProvideOptions, {
