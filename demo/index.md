@@ -65,11 +65,7 @@ profile:
 
 <ResumeHighlights>
 
-<ResumeHighlight title="架构与模块交付">负责商家后台复杂 B 端模块架构治理与稳定交付，采用楼层化、模块化拆分，解决旧项目冗余与耦合问题。</ResumeHighlight>
-
-<ResumeHighlight title="组件库沉淀">梳理复杂业务逻辑，沉淀报表、账单、筛选等通用组件，统一开发标准并提升团队页面搭建效率。</ResumeHighlight>
-
-<ResumeHighlight title="跨端与营销页">参与秒送门跨端小程序迭代，使用 React 交付营销活动 H5 与商品榜单楼层组件，优化多端适配与加载性能。</ResumeHighlight>
+<ResumeHighlight title="B 端模块交付">负责商家后台财务模块需求迭代与线上运维，统筹架构治理、组件沉淀与跨端营销页交付，保障核心模块稳定迭代。</ResumeHighlight>
 
 <ResumeHighlight title="工程化基建">搭建内部 CI/CD 流水线与项目脚手架，支持命令行一键部署测试 / 预发环境；开发 unplugin-jdoss 插件统一 OSS 静态资源上传。</ResumeHighlight>
 
@@ -93,9 +89,33 @@ profile:
 
 <ResumeHighlights>
 
-<ResumeHighlight title="报表性能优化">通过拆包、预请求与资源缓存优化大数据报表，加载时间降低 30%、包体积减少 70%，显著改善白屏与加载卡顿。</ResumeHighlight>
+<ResumeHighlight title="架构规范化">主导财务前端架构治理，统一组件开发标准，采用楼层化、模块化拆分页面，解决旧项目代码冗余与耦合，提升可维护性。</ResumeHighlight>
 
-<ResumeHighlight title="质量与监控">落地视觉还原与埋点监控体系，接入第三方 SDK，实现异常、接口与行为全链路上报。</ResumeHighlight>
+<ResumeHighlight title="组件库沉淀">针对财务业务场景拓展报表、账单、筛选等高频组件，统一开发规范，大幅提升团队页面搭建效率。</ResumeHighlight>
+
+<ResumeHighlight title="报表性能优化">通过拆包、预请求与资源缓存攻克大数据渲染瓶颈，加载时间降低 30%、包体积减少 70%，消除白屏与卡顿。</ResumeHighlight>
+
+<ResumeHighlight title="质量与监控">落地视觉还原标准，接入第三方监控 SDK，实现异常、接口与行为全链路上报，保障线上可观测性。</ResumeHighlight>
+
+<ResumeHighlight title="多端兼容">修复多设备、多浏览器兼容问题，保障不同分辨率下 UI 体验一致。</ResumeHighlight>
+
+<ResumeHighlight title="规范与 AI 提效">建立开发规范与代码评审机制，借助 AI 辅助技术选型、遗留代码重构与复杂逻辑优化，提升研发质量。</ResumeHighlight>
+
+</ResumeHighlights>
+
+</ResumeExperience>
+
+<ResumeExperience period="2024.06-2024.07" company="商品榜单" role="项目开发人员" stack="react,typescript,taro">
+
+<ResumeHighlights>
+
+<ResumeHighlight title="楼层化组件">按团队规范模块化开发页面楼层组件，结合业务需求迭代公共组件，提升复用性与可维护性。</ResumeHighlight>
+
+<ResumeHighlight title="跨端适配">使用 Taro 框架原生 API 完成多端样式兼容，解决移动端设备适配问题。</ResumeHighlight>
+
+<ResumeHighlight title="UI 还原与监控">100% 还原设计稿视觉效果，接入 SDK 完成埋点上报与线上监控。</ResumeHighlight>
+
+<ResumeHighlight title="加载性能">通过预加载、缓存与 CDN 加速优化页面加载与渲染速度。</ResumeHighlight>
 
 </ResumeHighlights>
 
