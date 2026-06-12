@@ -206,6 +206,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      vue:
+        specifier: ^3.5.38
+        version: 3.5.38(typescript@6.0.3)
     devDependencies:
       '@arethetypeswrong/core':
         specifier: ^0.18.3
