@@ -1,7 +1,24 @@
 import { defineConfig } from 'vitepress'
+import { experienceContainer } from '../../src/markdown/experience'
+import { fileURLToPath } from 'node:url'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
-  description: "A VitePress Site"
+  title: '贺永琪',
+  description: '前端开发工程师',
+  themeConfig: {
+    sidebar: [],
+    nav: [],
+  },
+  vite: {
+    resolve: {
+      alias: {
+        '@theme': fileURLToPath(new URL('../../src', import.meta.url)),
+      },
+    },
+  },
+  markdown: {
+    config(md) {
+      experienceContainer(md)
+    },
+  },
 })
