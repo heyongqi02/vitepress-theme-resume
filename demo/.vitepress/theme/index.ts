@@ -1,3 +1,3 @@
-import Theme from "../../../src/index";
+import Theme from "vitepress-theme-resume";
 
 export default Theme;

@@ -207,6 +207,12 @@ importers:
 
   .:
     dependencies:
+      markdown-it-container:
+        specifier: ^4.0.0
+        version: 4.0.0
+      vitepress:
+        specifier: ^2.0.0-alpha.17
+        version: 2.0.0-alpha.17(@types/node@24.13.2)(jiti@2.7.0)(lightningcss@1.32.0)(postcss@8.5.15)(typescript@6.0.3)(yaml@2.9.0)
       vue:
         specifier: ^3.5.38
         version: 3.5.38(typescript@6.0.3)
@@ -247,9 +253,6 @@ importers:
       markdown-it:
         specifier: ^14.2.0
         version: 14.2.0
-      markdown-it-container:
-        specifier: ^4.0.0
-        version: 4.0.0
       publint:
         specifier: ^0.3.21
         version: 0.3.21
@@ -277,9 +280,6 @@ importers:
       vite-plus:
         specifier: ^0.1.24
         version: 0.1.24(@arethetypeswrong/core@0.18.3)(@tsdown/css@0.22.1)(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(esbuild@0.27.7)(jiti@2.7.0)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@24.13.2)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))(yaml@2.9.0)
-      vitepress:
-        specifier: ^2.0.0-alpha.17
-        version: 2.0.0-alpha.17(@types/node@24.13.2)(jiti@2.7.0)(lightningcss@1.32.0)(postcss@8.5.15)(typescript@6.0.3)(yaml@2.9.0)
       vue-tsc:
         specifier: ~3.2.0
         version: 3.2.9(typescript@6.0.3)

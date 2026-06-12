@@ -1,9 +1,6 @@
-import { fileURLToPath } from "node:url";
-
-import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vitepress";
 
-import { experienceContainer } from "../../src/markdown/experience";
+import { experienceContainer } from "vitepress-theme-resume";
 
 export default defineConfig({
   title: "贺永琪",
@@ -11,14 +8,6 @@ export default defineConfig({
   themeConfig: {
     sidebar: [],
     nav: [],
-  },
-  vite: {
-    plugins: [tailwindcss()],
-    resolve: {
-      alias: {
-        "@theme": fileURLToPath(new URL("../../src", import.meta.url)),
-      },
-    },
   },
   markdown: {
     config(md) {

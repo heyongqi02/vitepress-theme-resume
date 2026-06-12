@@ -8,4 +8,5 @@ export default {
   Layout,
 } satisfies Theme;
 
+export { experienceContainer } from "./markdown/experience";
 export type { ResumeProfile, ResumeFrontmatter } from "./types";

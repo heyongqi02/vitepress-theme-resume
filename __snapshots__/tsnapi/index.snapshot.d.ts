@@ -9,6 +9,7 @@ export default _default
 // #endregion
 
 // #region Other
+export { experienceContainer }
 export { ResumeFrontmatter }
 export { ResumeProfile }
 // #endregion
