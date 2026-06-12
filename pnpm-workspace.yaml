@@ -1,3 +1,4 @@
+minimumReleaseAge: 0
 registries:
-  default: http://registry.m.jd.com/
+  default: https://registry.npmjs.org/
   "@jd": http://registry.m.jd.com/
