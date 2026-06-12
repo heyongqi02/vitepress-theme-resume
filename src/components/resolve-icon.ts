@@ -1,7 +1,6 @@
 import type { FunctionalComponent } from "vue";
 import {
   Briefcase,
-  CalendarRange,
   CircleDollarSign,
   Mail,
   MapPin,
@@ -28,5 +27,3 @@ export function resolveResumeIcon(text: string | number) {
 
   return iconRules.find((rule) => rule.test(value))?.icon ?? null;
 }
-
-export { CalendarRange };
