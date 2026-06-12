@@ -48,12 +48,11 @@ const metaItems = computed(() =>
       </template>
     </p>
 
-    <div v-if="profile.tags?.length" class="resume-header-tags">
-      <ResumeSkillTag
-        v-for="(tag, index) in profile.tags"
-        :key="tag.label"
-        :primary="index === 0"
-        :text="tag.label" />
-    </div>
+    <p v-if="profile.tags?.length" class="resume-header-tags">
+      <template v-for="(tag, index) in profile.tags" :key="tag.label">
+        <span v-if="index > 0" class="resume-header-meta-separator" aria-hidden="true" />
+        <ResumeSkillTag :primary="index === 0" :text="tag.label" />
+      </template>
+    </p>
   </header>
 </template>

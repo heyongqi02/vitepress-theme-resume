@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <span class="resume-tag" :class="{ 'resume-tag--primary': primary }">
+  <span class="resume-header-tag" :class="{ 'resume-header-tag--lead': primary }">
     {{ String(text) }}
   </span>
 </template>
