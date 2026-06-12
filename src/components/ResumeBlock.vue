@@ -22,7 +22,7 @@ const stackItems = computed(
 <template>
   <section class="resume-block">
     <header class="resume-block-header">
-      <div v-if="title" class="resume-block-heading min-w-0">
+      <div v-if="title" class="resume-block-heading">
         <p class="resume-block-title">{{ title }}</p>
         <p v-if="subtitle" class="resume-block-subtitle">{{ subtitle }}</p>
       </div>

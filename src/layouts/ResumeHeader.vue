@@ -2,36 +2,7 @@
 import { computed } from "vue";
 
 import { useResume } from "../use-resume";
-
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const PHONE_PATTERN = /^[\d\s\-+()]+$/;
-const HTTP_URL_PATTERN = /^https?:\/\//i;
-const DOMAIN_URL_PATTERN = /^(?:[\w-]+\.)+[\w-]{2,}(?:\/[^\s]*)?$/;
-
-function getMetaHref(item: string | number): string | undefined {
-  const text = String(item).trim();
-
-  if (EMAIL_PATTERN.test(text)) {
-    return `mailto:${text}`;
-  }
-
-  if (PHONE_PATTERN.test(text)) {
-    const digits = text.replace(/\D/g, "");
-    if (digits.length >= 7) {
-      return `tel:${digits}`;
-    }
-  }
-
-  if (HTTP_URL_PATTERN.test(text)) {
-    return text;
-  }
-
-  if (DOMAIN_URL_PATTERN.test(text)) {
-    return `https://${text}`;
-  }
-
-  return undefined;
-}
+import { getMetaHref } from "../utils/meta-href";
 
 const { profile } = useResume();
 
@@ -61,7 +32,7 @@ const metaItems = computed(() =>
           :rel="item.isExternal ? 'noopener noreferrer' : undefined">
           {{ item.label }}
         </a>
-        <span v-else class="min-w-0">{{ item.label }}</span>
+        <span v-else class="resume-min-w-0">{{ item.label }}</span>
       </template>
     </p>
 

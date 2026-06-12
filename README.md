@@ -5,6 +5,7 @@ A VitePress theme for single-page resumes with print-friendly A4 layout, profile
 ## Features
 
 - A4 page layout with print styles (`@page size: A4`)
+- Self-contained CSS — no Tailwind setup required
 - Profile header with auto-linked email, phone, and URLs in `meta`
 - `<ResumeBlock>` blocks with period, title, subtitle, and tech stack icons ([Simple Icons](https://simpleicons.org/))
 - `<ResumeHighlight>` / `<ResumeHighlights>` for structured bullet points
@@ -16,27 +17,11 @@ A VitePress theme for single-page resumes with print-friendly A4 layout, profile
 - Node.js `>=24.16.0`
 - [VitePress](https://vitepress.dev/) `^2.0.0-alpha.17`
 - Vue `^3.5`
-- Tailwind CSS `^4` with `@tailwindcss/vite`
 
 ## Install
 
 ```bash
-pnpm add -D vitepress vitepress-theme-resume tailwindcss @tailwindcss/vite
-```
-
-Add the Tailwind Vite plugin in your VitePress config so utility classes in theme components are generated during dev and build:
-
-```ts
-import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "vitepress";
-import { defineResumeConfig } from "vitepress-theme-resume/config";
-
-export default defineConfig({
-  extends: defineResumeConfig({
-    /* ... */
-  }),
-  vite: { plugins: [tailwindcss()] },
-});
+pnpm add -D vitepress vitepress-theme-resume
 ```
 
 `defineResumeConfig` merges sensible defaults (empty nav/sidebar, SSR `noExternal` for this package).
@@ -46,7 +31,6 @@ export default defineConfig({
 **.vitepress/config.ts**
 
 ```ts
-import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vitepress";
 import { defineResumeConfig } from "vitepress-theme-resume/config";
 
@@ -56,7 +40,6 @@ export default defineConfig({
     description: "Your role",
     lang: "zh-CN",
   }),
-  vite: { plugins: [tailwindcss()] },
 });
 ```
 
@@ -190,14 +173,26 @@ Default slot: body content (e.g. `<ResumeHighlights>` or markdown).
 
 ### Tech stack icons
 
-`stack` names map to [Simple Icons](https://simpleicons.org/) slugs via [unpkg](https://unpkg.com/simple-icons@v16/icons/). Common aliases are built in (`js` → `javascript`, `ts` → `typescript`, `vue` → `vuedotjs`, `node` → `nodedotjs`, etc.); dots in names become `dot`. Icons that fail to load are hidden.
+`stack` names map to [Simple Icons](https://simpleicons.org/) slugs via [cdn.simpleicons.org](https://cdn.simpleicons.org/). Common aliases are built in (`js` → `javascript`, `ts` → `typescript`, `vue` → `vuedotjs`, `node` → `nodedotjs`, etc.); dots in names become `dot`. Icons that fail to load show a text label fallback.
+
+See [`docs/simple-icons-slugs.md`](docs/simple-icons-slugs.md) for the full slug reference.
 
 ## Composables
 
 ```ts
-import { useResume } from "vitepress-theme-resume";
+import { useResume, resolveResumeConfig } from "vitepress-theme-resume";
 
 const { config, isResumeMode, profile } = useResume();
+```
+
+## Fonts
+
+The theme ships with a self-hosted Inter variable font (~48 KB). To use system fonts instead, override `--font-sans` in your site CSS:
+
+```css
+:root {
+  --font-sans: system-ui, sans-serif;
+}
 ```
 
 ## Development
@@ -206,9 +201,10 @@ This repo uses [vite-plus](https://github.com/heyongqi02/vite-plus) and a `demo`
 
 ```bash
 pnpm install
-pnpm exec vp run demo_dev    # build theme + start demo dev server
-pnpm exec vp run demo_build  # build theme + demo site
-pnpm run build               # build theme package only
+pnpm dev              # watch build + demo dev server
+pnpm run demo:build   # build theme + demo site
+pnpm run build        # build theme package only (with CI checks)
+pnpm test             # run unit tests
 ```
 
 ## License

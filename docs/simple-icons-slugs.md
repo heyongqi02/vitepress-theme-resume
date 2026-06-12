@@ -1,6 +1,6 @@
 # Simple Icons slugs
 
-> https://unpkg.com/simple-icons@v16/icons/[ICON SLUG].svg
+> https://cdn.simpleicons.org/[ICON SLUG]
 
 | Brand name                        | Brand slug                     |
 | :-------------------------------- | :----------------------------- |

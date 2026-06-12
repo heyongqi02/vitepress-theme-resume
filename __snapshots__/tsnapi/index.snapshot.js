@@ -21,4 +21,6 @@ export default _default
 export { baseConfig }
 export { defaultResumeThemeOptions }
 export { defineResumeConfig }
+export { resolveResumeConfig }
+export { resolveResumeProfile }
 // #endregion

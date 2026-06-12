@@ -11,15 +11,7 @@ const STACK_SLUG_ALIASES: Record<string, string> = {
   vue: "vuedotjs",
   "vue.js": "vuedotjs",
   vue3: "vuedotjs",
-  rspack: "rspack",
-  webpack: "webpack",
-  tailwindcss: "tailwindcss",
   tailwind: "tailwindcss",
-  docker: "docker",
-  rust: "rust",
-  github: "github",
-  rolldown: "rolldown",
-  vitepress: "vitepress",
 };
 
 export function resolveSimpleIconSlug(name: string): string {

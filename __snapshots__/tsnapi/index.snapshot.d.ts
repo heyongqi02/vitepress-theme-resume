@@ -88,6 +88,8 @@ export { baseConfig }
 export { defaultResumeThemeOptions }
 export { defineResumeConfig }
 export { ResolvedResumeConfig }
+export { resolveResumeConfig }
+export { resolveResumeProfile }
 export { ResumeFrontmatter }
 export { ResumeProfile }
 export { ResumeProfileTag }

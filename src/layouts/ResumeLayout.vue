@@ -6,12 +6,12 @@ const { config, isResumeMode } = useResume();
 </script>
 
 <template>
-  <div class="resume-layout" :class="isResumeMode ? 'px-4 py-6 sm:px-6 print:p-0' : ''">
+  <div class="resume-layout" :class="{ 'resume-layout--page': isResumeMode }">
     <a href="#resume-main" class="resume-skip-link">{{ config.skipLinkLabel }}</a>
 
     <template v-if="isResumeMode">
       <slot name="page-before" />
-      <article class="resume-page print:m-0 print:max-w-none print:px-0 print:py-0">
+      <article class="resume-page">
         <slot name="header-before" />
         <ResumeHeader />
         <slot name="header-after" />

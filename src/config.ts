@@ -24,7 +24,7 @@ export const defaultResumeThemeOptions: Required<Pick<ResumeThemeOptions, "skipL
 };
 
 export function resolveResumeProfile(
-  frontmatterProfile?: ResumeProfile,
+  frontmatterProfile?: Partial<ResumeProfile>,
   defaults?: Partial<ResumeProfile>,
 ): ResumeProfile | undefined {
   if (!frontmatterProfile && !defaults) {
