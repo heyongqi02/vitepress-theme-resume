@@ -1,8 +1,18 @@
-import { defineConfig } from "vite-plus";
-import tailwindcss from '@tailwindcss/vite'
+import { lib } from "@bjmhe/viteplus-preset";
+import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
+export default lib(
+  {},
+  {
+    // @ts-ignore
     plugins: [
-        tailwindcss(),
-      ]
-})
+      // @ts-ignore
+      tailwindcss(),
+    ],
+    run: {
+      tasks: {
+        autofix: ["vpx automd", "vpx bjmhe fetch", "vp check --fix"],
+      },
+    },
+  },
+);

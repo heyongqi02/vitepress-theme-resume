@@ -39,7 +39,7 @@
 
   .resume-content h2::before {
     content: "";
-    @apply absolute bottom-0 left-0 right-0 h-px bg-zinc-200;
+    @apply absolute right-0 bottom-0 left-0 h-px bg-zinc-200;
   }
 
   .resume-content h2:first-child {
@@ -73,7 +73,7 @@
 
   .resume-content ol > li::before {
     content: counter(list-item) ".";
-    @apply absolute top-0 left-0 text-xs font-semibold tabular-nums text-slate-500;
+    @apply absolute top-0 left-0 text-xs font-semibold text-slate-500 tabular-nums;
   }
 }
 

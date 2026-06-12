@@ -1,10 +1,10 @@
 export interface ResumeProfile {
-  name: string
-  meta?: string[]
-  intent?: string[]
+  name: string;
+  meta?: string[];
+  intent?: string[];
 }
 
 export interface ResumeFrontmatter {
-  resume?: boolean
-  profile?: ResumeProfile
+  resume?: boolean;
+  profile?: ResumeProfile;
 }
