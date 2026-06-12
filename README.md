@@ -8,7 +8,16 @@ A VitePress theme for single-page resumes with print-friendly A4 layout.
 pnpm add -D vitepress vitepress-theme-resume tailwindcss @tailwindcss/vite
 ```
 
-`defineResumeConfig` registers the Tailwind Vite plugin automatically so utility classes in theme components are generated during dev and build.
+Add the Tailwind Vite plugin in your VitePress config so utility classes in theme components are generated during dev and build:
+
+```ts
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineConfig({
+  extends: defineResumeConfig({ /* ... */ }),
+  vite: { plugins: [tailwindcss()] },
+});
+```
 
 ## Quick start
 
