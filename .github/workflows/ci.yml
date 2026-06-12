@@ -10,31 +10,29 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v4
+      - name: Checkout
+        uses: actions/checkout@v5
         with:
-          version: 11.4.0
+          fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - name: Setup Vite Plus
+        uses: heyongqi02/workflows/setup-vp@vp
         with:
-          node-version: 24
-          cache: pnpm
-
-      - run: pnpm install --frozen-lockfile
+          fetch-all: true
+          cache: false
 
       - name: Build theme package
-        run: pnpm run build
+        run: vp pack
         env:
           CI: true
 
       - name: Build demo site
-        run: pnpm run demo:build
+        run: vp run demo_build
         env:
           CI: true
 
       - name: Run tests
-        run: pnpm test
+        run: vp test
 
       - name: Verify API snapshots are up to date
         run: git diff --exit-code __snapshots__/tsnapi/
