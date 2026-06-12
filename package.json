@@ -20,7 +20,6 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
-    "./markdown/experience": "./dist/markdown/experience.js",
     "./package.json": "./package.json",
     "./style.css": "./dist/style.css"
   },
@@ -39,7 +38,6 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "markdown-it-container": "^4.0.0",
     "vitepress": "^2.0.0-alpha.17",
     "vue": "^3.5.38"
   },
@@ -49,13 +47,11 @@
     "@tsconfig/node24": "^24.0.4",
     "@tsdown/css": "0.22.1",
     "@types/markdown-it": "^14.1.2",
-    "@types/markdown-it-container": "^4.0.0",
     "@types/node": "^24.13.2",
     "@typescript/native-preview": "7.0.0-dev.20260603.1",
     "@vitest/coverage-v8": "^4.1.8",
     "@vue/tsconfig": "^0.9.1",
     "bumpp": "^11.1.0",
-    "markdown-it": "^14.2.0",
     "publint": "^0.3.21",
     "rolldown-plugin-dts": "^0.25.2",
     "skills": "^1.5.11",
@@ -68,7 +64,6 @@
     "vue-tsc": "~3.2.0"
   },
   "peerDependencies": {
-    "markdown-it-container": "^4.0.0",
     "vitepress": "^2.0.0-alpha.17",
     "vue": "^3.5.38"
   },
