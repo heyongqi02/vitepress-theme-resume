@@ -1,12 +1,12 @@
 # vitepress-theme-resume
 
-A VitePress theme for single-page resumes with print-friendly A4 layout, profile header, and structured experience blocks.
+A VitePress theme for single-page resumes with print-friendly A4 layout, profile header, and structured resume blocks.
 
 ## Features
 
 - A4 page layout with print styles (`@page size: A4`)
 - Profile header with auto-linked email and phone in `meta`
-- `<ResumeExperience>` blocks with period, company, role, and tech stack icons ([Simple Icons](https://simpleicons.org/))
+- `<ResumeBlock>` blocks with period, title, subtitle, and tech stack icons ([Simple Icons](https://simpleicons.org/))
 - `<ResumeHighlight>` / `<ResumeHighlights>` for structured bullet points
 - Layout slots for extending the theme without forking
 - `useResume()` composable for custom Vue components
@@ -85,7 +85,7 @@ profile:
 
 ## Experience
 
-<ResumeExperience period="2024-至今" company="Company Name" role="Role title" stack="vue,vite">
+<ResumeBlock period="2024-至今" title="Company Name" subtitle="Role title" stack="vue,vite">
 
 <ResumeHighlights>
 
@@ -93,7 +93,7 @@ profile:
 
 </ResumeHighlights>
 
-</ResumeExperience>
+</ResumeBlock>
 ```
 
 Resume layout activates when `resume: true` (or theme default) **and** `profile.name` is set.
@@ -157,14 +157,14 @@ export default {
 
 Registered globally when using the default theme. Also exported from the main entry for local imports.
 
-### `<ResumeExperience>`
+### `<ResumeBlock>`
 
-| Prop      | Type     | Description                             |
-| --------- | -------- | --------------------------------------- |
-| `period`  | `string` | Time range, e.g. `2024.06-至今`         |
-| `company` | `string` | Company or institution name             |
-| `role`    | `string` | Job title or degree                     |
-| `stack`   | `string` | Comma-separated tech names for icon row |
+| Prop       | Type     | Description                             |
+| ---------- | -------- | --------------------------------------- |
+| `period`   | `string` | Time range, e.g. `2024.06-至今`         |
+| `title`    | `string` | Primary heading (company, project, etc.) |
+| `subtitle` | `string` | Secondary line (role, degree, etc.)     |
+| `stack`    | `string` | Comma-separated tech names for icon row |
 
 Default slot: body content (e.g. `<ResumeHighlights>` or markdown).
 

@@ -6,7 +6,7 @@ export function useResume() {}
 // #endregion
 
 // #region Variables
-export var ResumeExperience /* const */
+export var ResumeBlock /* const */
 export var ResumeHighlight /* const */
 export var ResumeHighlights
 export var ResumeTheme /* const */

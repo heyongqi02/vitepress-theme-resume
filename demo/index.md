@@ -27,7 +27,7 @@ profile:
 
 ## 工作经历
 
-<ResumeExperience period="2024.06-至今" company="北京京东世纪贸易有限公司" role="软件开发工程师（前端）" stack="react,typescript,vite,webpack,rspack,docker">
+<ResumeBlock period="2024.06-至今" title="北京京东世纪贸易有限公司" subtitle="软件开发工程师（前端）" stack="react,typescript,vite,webpack,rspack,docker">
 
 <ResumeHighlights>
 
@@ -37,9 +37,9 @@ profile:
 
 </ResumeHighlights>
 
-</ResumeExperience>
+</ResumeBlock>
 
-<ResumeExperience period="2023.07-2024.02" company="江苏群杰物联科技有限公司" role="前端开发工程师" stack="vue,webpack">
+<ResumeBlock period="2023.07-2024.02" title="江苏群杰物联科技有限公司" subtitle="前端开发工程师" stack="vue,webpack">
 
 <ResumeHighlights>
 
@@ -47,11 +47,11 @@ profile:
 
 </ResumeHighlights>
 
-</ResumeExperience>
+</ResumeBlock>
 
 ## 项目经历
 
-<ResumeExperience period="2024.07-至今" company="外卖商家中心" role="财务模块负责人" stack="react,typescript,vite,nodejs">
+<ResumeBlock period="2024.07-至今" title="外卖商家中心" subtitle="财务模块负责人" stack="react,typescript,vite,nodejs">
 
 <ResumeHighlights>
 
@@ -69,9 +69,9 @@ profile:
 
 </ResumeHighlights>
 
-</ResumeExperience>
+</ResumeBlock>
 
-<ResumeExperience period="2024.06-2024.07" company="商品榜单" role="项目开发人员" stack="react,typescript,taro">
+<ResumeBlock period="2024.06-2024.07" title="商品榜单" subtitle="项目开发人员" stack="react,typescript,taro">
 
 <ResumeHighlights>
 
@@ -85,11 +85,11 @@ profile:
 
 </ResumeHighlights>
 
-</ResumeExperience>
+</ResumeBlock>
 
 ## 教育经历
 
-<ResumeExperience period="2020-2024" company="南京邮电大学" role="本科，生物医学工程">
+<ResumeBlock period="2020-2024" title="南京邮电大学" subtitle="本科，生物医学工程">
 
 <ResumeHighlights>
 
@@ -97,13 +97,13 @@ profile:
 
 </ResumeHighlights>
 
-</ResumeExperience>
+</ResumeBlock>
 
 ## 校园经历
 
 ### 社团任职
 
-<ResumeExperience period="2020.10-2021.11" company="南京邮电大学" role="院学生会部员 & 部长、创联部员">
+<ResumeBlock period="2020.10-2021.11" title="南京邮电大学" subtitle="院学生会部员 & 部长、创联部员">
 
 <ResumeHighlights>
 
@@ -115,11 +115,11 @@ profile:
 
 </ResumeHighlights>
 
-</ResumeExperience>
+</ResumeBlock>
 
 ### 竞赛经历
 
-<ResumeExperience period="2021-2022" company="美国大学生数学建模竞赛（MCM/ICM）" role="队员">
+<ResumeBlock period="2021-2022" title="美国大学生数学建模竞赛（MCM/ICM）" subtitle="队员">
 
 <ResumeHighlights>
 
@@ -127,7 +127,7 @@ profile:
 
 </ResumeHighlights>
 
-</ResumeExperience>
+</ResumeBlock>
 
 ## 荣誉奖项
 

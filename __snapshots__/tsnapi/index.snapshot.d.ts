@@ -10,7 +10,7 @@ export declare function useResume(): {
 // #endregion
 
 // #region Variables
-export declare const ResumeExperience: typeof __VLS_export$2;
+export declare const ResumeBlock: typeof __VLS_export$2;
 export declare const ResumeHighlight: typeof __VLS_export$1;
 export declare const ResumeHighlights: typeof __VLS_export;
 export declare const ResumeTheme: {

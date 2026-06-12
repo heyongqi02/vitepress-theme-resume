@@ -305,7 +305,7 @@
     gap: var(--space-sm);
   }
 
-  .resume-experience-body ol {
+  .resume-block-body ol {
     display: none;
   }
 
@@ -326,18 +326,18 @@
     color: var(--color-resume-text-3);
   }
 
-  /* Experience blocks */
-  .resume-experience {
+  /* Resume blocks */
+  .resume-block {
     padding-bottom: var(--space-xs);
     break-inside: avoid;
   }
 
-  .resume-experience + .resume-experience {
+  .resume-block + .resume-block {
     padding-top: var(--space-xs);
     border-top: 1px solid var(--color-resume-divider);
   }
 
-  .resume-experience-header {
+  .resume-block-header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -345,14 +345,14 @@
     margin-bottom: var(--space-xs);
   }
 
-  .resume-experience-company {
+  .resume-block-title {
     font-size: var(--text-entry);
     line-height: 1.35;
     font-weight: 600;
     color: var(--color-resume-text-1);
   }
 
-  .resume-experience-role {
+  .resume-block-subtitle {
     margin-top: 0.125rem;
     font-size: var(--text-body);
     font-weight: 400;
@@ -360,12 +360,12 @@
     color: var(--color-resume-text-1);
   }
 
-  .resume-experience-meta {
+  .resume-block-meta {
     flex-shrink: 0;
     text-align: right;
   }
 
-  .resume-experience-period {
+  .resume-block-period {
     font-size: var(--text-body);
     font-weight: 400;
     letter-spacing: 0.02em;
@@ -373,7 +373,7 @@
     color: var(--color-resume-text-3);
   }
 
-  .resume-content .resume-experience-stack {
+  .resume-content .resume-block-stack {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -385,11 +385,11 @@
     list-style: none;
   }
 
-  .resume-content .resume-experience-stack > li {
+  .resume-content .resume-block-stack > li {
     padding-left: 0;
   }
 
-  .resume-content .resume-experience-stack > li::before {
+  .resume-content .resume-block-stack > li::before {
     content: none;
   }
 
@@ -408,33 +408,33 @@
     opacity: 0.9;
   }
 
-  .resume-experience-body {
+  .resume-block-body {
     color: var(--color-resume-text-1);
   }
 
-  /* Legacy: title from markdown **Company** Role in slot */
-  .resume-experience:not(:has(.resume-experience-company)) {
+  /* Legacy: title from markdown **Title** Subtitle in slot */
+  .resume-block:not(:has(.resume-block-title)) {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     column-gap: var(--space-lg);
     row-gap: var(--space-sm);
   }
 
-  .resume-experience:not(:has(.resume-experience-company)) .resume-experience-header {
+  .resume-block:not(:has(.resume-block-title)) .resume-block-header {
     display: contents;
   }
 
-  .resume-experience:not(:has(.resume-experience-company)) .resume-experience-meta {
+  .resume-block:not(:has(.resume-block-title)) .resume-block-meta {
     grid-column: 2;
     grid-row: 1;
     align-self: start;
   }
 
-  .resume-experience:not(:has(.resume-experience-company)) .resume-experience-body {
+  .resume-block:not(:has(.resume-block-title)) .resume-block-body {
     display: contents;
   }
 
-  .resume-experience:not(:has(.resume-experience-company)) .resume-experience-body > p:first-child {
+  .resume-block:not(:has(.resume-block-title)) .resume-block-body > p:first-child {
     grid-column: 1;
     grid-row: 1;
     align-self: start;
@@ -446,15 +446,15 @@
     color: var(--color-resume-text-1);
   }
 
-  .resume-experience:not(:has(.resume-experience-company))
-    .resume-experience-body
+  .resume-block:not(:has(.resume-block-title))
+    .resume-block-body
     > p:first-child
     strong {
     font-weight: 600;
   }
 
-  .resume-experience:not(:has(.resume-experience-company))
-    .resume-experience-body
+  .resume-block:not(:has(.resume-block-title))
+    .resume-block-body
     > :not(p:first-child) {
     grid-column: 1 / -1;
   }
@@ -511,12 +511,12 @@
   }
 
   @media (max-width: 480px) {
-    .resume-experience-header {
+    .resume-block-header {
       flex-direction: column;
       gap: var(--space-sm);
     }
 
-    .resume-experience-meta {
+    .resume-block-meta {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -524,7 +524,7 @@
       text-align: left;
     }
 
-    .resume-content .resume-experience-stack {
+    .resume-content .resume-block-stack {
       justify-content: flex-start;
       margin-top: 0;
     }
@@ -577,7 +577,7 @@
   }
 
   .resume-content h2,
-  .resume-experience {
+  .resume-block {
     break-inside: avoid;
   }
 

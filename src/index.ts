@@ -1,7 +1,7 @@
 import "./styles/deps";
 
 export { default, ResumeTheme } from "./theme";
-export { default as ResumeExperience } from "./components/ResumeExperience.vue";
+export { default as ResumeBlock } from "./components/ResumeBlock.vue";
 export { default as ResumeHighlight } from "./components/ResumeHighlight.vue";
 export { default as ResumeHighlights } from "./components/ResumeHighlights.vue";
 export { useResume } from "./use-resume";
