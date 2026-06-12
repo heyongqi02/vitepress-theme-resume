@@ -23,41 +23,7 @@ profile:
 - 掌握 React / Vue / TypeScript，具备 B 端架构拆分、模块化治理与通用组件抽象经验。
 - 具备性能优化实践：通过拆包、预请求与资源缓存，实现加载时间降低 30%、包体积减少 70%。
 - 搭建内部 CI/CD 流水线与脚手架，命令行一键部署测试 / 预发环境；熟练使用 Git、Docker 等工程化工具。
-- 向 TaroUI 贡献 14 个 PR、NutUI 贡献 6+ 个 PR；自研 npm 包 vitepress-theme-resume；技术博客 100+ 篇、21w+ 阅读。
-
-## 开源项目
-
-<ResumeExperience period="2024-至今" company="vitepress-theme-resume" role="作者 & 维护者" stack="vitepress,vue,typescript,tailwindcss,nodejs">
-
-<ResumeHighlights>
-
-<ResumeHighlight title="VitePress 简历主题">设计并实现 A4 打印友好单页简历主题，提供 ResumeExperience / ResumeHighlight 组件 API，支持 Simple Icons 技术栈展示。</ResumeHighlight>
-
-<ResumeHighlight title="npm 包发布与工程化">基于 tsdown + Rolldown 构建 ESM 产物，集成 Tailwind v4、VitePress 2 alpha SSR，配置 attw / publint 校验后发布至 npm。</ResumeHighlight>
-
-</ResumeHighlights>
-
-</ResumeExperience>
-
-<ResumeExperience period="2024-2025" company="unplugin-jdoss" role="作者" stack="webpack,vite,rspack,nodejs">
-
-<ResumeHighlights>
-
-<ResumeHighlight title="跨构建器 OSS 插件">开发 unplugin-jdoss，统一适配 Webpack / Vite / Rspack，构建时将静态资源自动上传 OSS 平台，简化多环境资源部署。</ResumeHighlight>
-
-</ResumeHighlights>
-
-</ResumeExperience>
-
-<ResumeExperience period="2023-2025" company="TaroUI / NutUI" role="开源贡献者" stack="react,vue,taro">
-
-<ResumeHighlights>
-
-<ResumeHighlight title="组件库 PR">向 TaroUI 提交 14 个 PR、NutUI 提交 6+ 个 PR，修复 Input / Swiper / Uploader 等组件 bug，参与 class 组件升级函数组件。</ResumeHighlight>
-
-</ResumeHighlights>
-
-</ResumeExperience>
+- 向 TaroUI 贡献 14 个 PR、NutUI 贡献 6+ 个 PR；技术博客 100+ 篇、21w+ 阅读。
 
 ## 工作经历
 
@@ -173,3 +139,8 @@ profile:
 ## 资格证书
 
 - 大学英语四级
+
+## 开源项目
+
+- 自研 vitepress-theme-resume（VitePress 简历主题）、unplugin-jdoss（Webpack / Vite / Rspack OSS 上传插件），均已发布 npm。
+- 向 TaroUI 贡献 14 个 PR、NutUI 贡献 6+ 个 PR，修复组件 bug 并参与 class 组件升级。
