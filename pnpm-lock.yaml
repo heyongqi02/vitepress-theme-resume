@@ -211,7 +211,7 @@ importers:
         specifier: ^4.0.0
         version: 4.3.0
       vitepress:
-        specifier: ^2.0.0-alpha.17
+        specifier: 2.0.0-alpha.17
         version: 2.0.0-alpha.17(@types/node@24.13.2)(jiti@2.7.0)(lightningcss@1.32.0)(postcss@8.5.15)(typescript@6.0.3)(yaml@2.9.0)
       vue:
         specifier: ^3.5.38
@@ -269,7 +269,7 @@ importers:
         specifier: ^0.1.24
         version: 0.1.24(@arethetypeswrong/core@0.18.3)(@tsdown/css@0.22.1)(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(esbuild@0.27.7)(jiti@2.7.0)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@24.13.2)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))(yaml@2.9.0)
       vue-tsc:
-        specifier: ~3.2.0
+        specifier: ~3.2.9
         version: 3.2.9(typescript@6.0.3)
 
   demo:
@@ -2192,8 +2192,8 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  obug@2.1.2:
-    resolution: {integrity: sha512-AWGB9WFcRXOQs48Z/udjI5ZcZMHXwX8XPByNpOydgcGsDLIzjGizhoMWJyKAWze7AVW/2W1i+/gPX4YtKe5cyg==}
+  obug@2.1.3:
+    resolution: {integrity: sha512-9miFgM2OFba7hB+pRgvtV84pYTBaoTHohvmIgiRt6dRIzbwEOIaNaP+dIlGs2fNFoB0SeISs0Jz5WFVRid6Xyg==}
     engines: {node: '>=12.20.0'}
 
   oniguruma-parser@0.12.2:
@@ -3533,7 +3533,7 @@ snapshots:
       istanbul-lib-report: 3.0.1
       istanbul-reports: 3.2.0
       magicast: 0.5.3
-      obug: 2.1.2
+      obug: 2.1.3
       std-env: 4.1.0
       tinyrainbow: 3.1.0
       vitest: 4.1.8(@types/node@24.13.2)(@vitest/coverage-v8@4.1.8)(vite@8.0.16(@types/node@24.13.2)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
@@ -3621,7 +3621,7 @@ snapshots:
       '@types/chai': 5.2.3
       '@voidzero-dev/vite-plus-core': 0.1.24(@arethetypeswrong/core@0.18.3)(@tsdown/css@0.22.1)(@types/node@24.13.2)(esbuild@0.27.7)(jiti@2.7.0)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(yaml@2.9.0)
       es-module-lexer: 1.7.0
-      obug: 2.1.2
+      obug: 2.1.3
       pixelmatch: 7.2.0
       pngjs: 7.0.0
       sirv: 3.0.2
@@ -4073,7 +4073,7 @@ snapshots:
 
   nanoid@3.3.12: {}
 
-  obug@2.1.2: {}
+  obug@2.1.3: {}
 
   oniguruma-parser@0.12.2: {}
 
@@ -4230,7 +4230,7 @@ snapshots:
       birpc: 4.0.0
       dts-resolver: 3.0.0
       get-tsconfig: 5.0.0-beta.5
-      obug: 2.1.2
+      obug: 2.1.3
       rolldown: 1.1.1
     optionalDependencies:
       '@typescript/native-preview': 7.0.0-dev.20260603.1
@@ -4391,7 +4391,7 @@ snapshots:
       empathic: 2.0.1
       hookable: 6.1.1
       import-without-cache: 0.4.0
-      obug: 2.1.2
+      obug: 2.1.3
       picomatch: 4.0.4
       rolldown: 1.1.1
       rolldown-plugin-dts: 0.25.2(@typescript/native-preview@7.0.0-dev.20260603.1)(rolldown@1.1.1)(typescript@6.0.3)(vue-tsc@3.2.9(typescript@6.0.3))
@@ -4479,7 +4479,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
       '@vue/reactivity': 3.5.38
-      obug: 2.1.2
+      obug: 2.1.3
       unplugin: 3.0.0
       vite: 8.0.16(@types/node@24.13.2)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0)
       vue: 3.5.38(typescript@6.0.3)
@@ -4654,7 +4654,7 @@ snapshots:
       es-module-lexer: 2.1.0
       expect-type: 1.3.0
       magic-string: 0.30.21
-      obug: 2.1.2
+      obug: 2.1.3
       pathe: 2.0.3
       picomatch: 4.0.4
       std-env: 4.1.0
