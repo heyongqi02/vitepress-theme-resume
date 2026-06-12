@@ -1,5 +1,5 @@
-/** @see https://unpkg.com/simple-icons@v16/icons/[ICON SLUG].svg */
-const SIMPLE_ICONS_CDN = "https://unpkg.com/simple-icons@v16/icons";
+/** @see https://cdn.simpleicons.org/[ICON SLUG]/[COLOR] */
+const SIMPLE_ICONS_COLORED_CDN = "https://cdn.simpleicons.org";
 
 /** Common stack aliases that differ from the Simple Icons slug. */
 const STACK_SLUG_ALIASES: Record<string, string> = {
@@ -27,8 +27,10 @@ export function resolveSimpleIconSlug(name: string): string {
   return STACK_SLUG_ALIASES[normalized] ?? normalized.replaceAll(".", "dot");
 }
 
-export function getSimpleIconUrl(slug: string): string {
-  return `${SIMPLE_ICONS_CDN}/${slug}.svg`;
+export function getSimpleIconUrl(slug: string, color?: string): string {
+  return color
+    ? `${SIMPLE_ICONS_COLORED_CDN}/${slug}/${color}`
+    : `${SIMPLE_ICONS_COLORED_CDN}/${slug}`;
 }
 
 export function getStackIconUrl(name: string): string {

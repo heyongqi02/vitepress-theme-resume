@@ -404,17 +404,6 @@
     transform-origin: center top;
   }
 
-  @media (hover: hover) {
-    .resume-block {
-      border-radius: 4px;
-      transition: background-color var(--duration-resume) var(--ease-resume);
-    }
-
-    .resume-block:hover {
-      background-color: color-mix(in srgb, var(--color-resume-brand) 4%, transparent);
-    }
-  }
-
   .resume-block + .resume-block {
     padding-top: var(--space-md);
     border-top: 1px solid var(--color-resume-divider);
@@ -480,24 +469,18 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 2px;
-    border-radius: 3px;
+    padding: 0;
     cursor: default;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
-    transition: background-color var(--duration-resume-fast) var(--ease-resume);
   }
 
   .resume-stack-item:focus-visible {
     outline: none;
+    border-radius: 2px;
     box-shadow:
       0 0 0 2px var(--color-resume-surface),
       0 0 0 4px var(--color-resume-brand);
-  }
-
-  .resume-stack-item:hover,
-  .resume-stack-item:focus-visible {
-    background-color: color-mix(in srgb, var(--color-resume-brand) 8%, transparent);
   }
 
   .resume-stack-item__icon {
@@ -505,7 +488,7 @@
     width: 12px;
     height: 12px;
     flex-shrink: 0;
-    opacity: 0.82;
+    opacity: 0.92;
     transform-origin: center;
     transition:
       opacity var(--duration-resume-fast) var(--ease-resume),
@@ -515,11 +498,7 @@
   .resume-stack-item:hover .resume-stack-item__icon,
   .resume-stack-item:focus-visible .resume-stack-item__icon {
     opacity: 1;
-    transform: scale(1.12);
-  }
-
-  .resume-stack-item:active .resume-stack-item__icon {
-    transform: scale(0.96);
+    transform: scale(1.08);
   }
 
   .resume-block-body {
@@ -753,10 +732,8 @@
     background-size: 100% 1px;
   }
 
-  .resume-block,
   .resume-stack-item,
   .resume-stack-item__icon {
-    background-color: transparent !important;
     transform: none !important;
   }
 
