@@ -10,7 +10,17 @@ export interface ResumeProfile {
   name: string;
   meta?: Array<string | number>;
   intent?: Array<string | number>;
+  tags?: ResumeProfileTag[];
 }
+export interface ResumeProfileTag {
+  label: string;
+  icon?: string;
+  tone?: SkillTagTone;
+}
+// #endregion
+
+// #region Types
+export type SkillTagTone = "sky" | "emerald" | "amber" | "rose" | "violet" | "cyan";
 // #endregion
 
 // #region Default Export

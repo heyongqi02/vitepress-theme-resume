@@ -210,9 +210,6 @@ importers:
       '@lucide/vue':
         specifier: ^1.18.0
         version: 1.18.0(vue@3.5.38(typescript@6.0.3))
-      simple-icons:
-        specifier: ^16.23.0
-        version: 16.23.0
       simple-icons-font:
         specifier: ^16.23.0
         version: 16.23.0
@@ -2374,10 +2371,6 @@ packages:
   simple-icons-font@16.23.0:
     resolution: {integrity: sha512-Hc44Uuzm0n6g62lgDr+8NgJcpXZOx6fpLO03DpS/MOJTyT03ovGFt9qL2XpJNQrkvvEgGTlSm/G7SBR++C05YA==}
 
-  simple-icons@16.23.0:
-    resolution: {integrity: sha512-08MaTpxj9zGYUIe38tfELYkaHiGE1YgbrbXmTBf+GPxi5mEqLSORQqOXrP0QKPdaFuzEDSmW5o4xkbLlFhmdCw==}
-    engines: {node: '>=0.12.18'}
-
   sirv@3.0.2:
     resolution: {integrity: sha512-2wcC/oGxHis/BoHkkPwldgiPSYcpZK3JU28WoMVv55yHJgcZ8rlXvuG9iZggz+sU1d4bRgIGASwyWqjxu3FM0g==}
     engines: {node: '>=18'}
@@ -4357,8 +4350,6 @@ snapshots:
   siginfo@2.0.0: {}
 
   simple-icons-font@16.23.0: {}
-
-  simple-icons@16.23.0: {}
 
   sirv@3.0.2:
     dependencies:

@@ -28,7 +28,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "vp pack",
+    "build": "vp pack && node scripts/copy-icon-fonts.mjs",
     "dev": "vp pack --watch",
     "prepublishOnly": "vp run build",
     "release": "bumpp",
@@ -39,7 +39,6 @@
   },
   "dependencies": {
     "@lucide/vue": "^1.18.0",
-    "simple-icons": "^16.23.0",
     "simple-icons-font": "^16.23.0",
     "vitepress": "^2.0.0-alpha.17",
     "vue": "^3.5.38"
