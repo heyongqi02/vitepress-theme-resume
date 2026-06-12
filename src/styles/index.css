@@ -446,16 +446,11 @@
     color: var(--color-resume-text-1);
   }
 
-  .resume-block:not(:has(.resume-block-title))
-    .resume-block-body
-    > p:first-child
-    strong {
+  .resume-block:not(:has(.resume-block-title)) .resume-block-body > p:first-child strong {
     font-weight: 600;
   }
 
-  .resume-block:not(:has(.resume-block-title))
-    .resume-block-body
-    > :not(p:first-child) {
+  .resume-block:not(:has(.resume-block-title)) .resume-block-body > :not(p:first-child) {
     grid-column: 1 / -1;
   }
 

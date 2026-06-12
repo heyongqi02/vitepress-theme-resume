@@ -5,7 +5,7 @@ A VitePress theme for single-page resumes with print-friendly A4 layout, profile
 ## Features
 
 - A4 page layout with print styles (`@page size: A4`)
-- Profile header with auto-linked email and phone in `meta`
+- Profile header with auto-linked email, phone, and URLs in `meta`
 - `<ResumeBlock>` blocks with period, title, subtitle, and tech stack icons ([Simple Icons](https://simpleicons.org/))
 - `<ResumeHighlight>` / `<ResumeHighlights>` for structured bullet points
 - Layout slots for extending the theme without forking
@@ -79,6 +79,7 @@ profile:
   meta:
     - your@email.com
     - 13800000000
+    - github.com/yourname
   tags:
     - label: Frontend Engineer
 ---
@@ -91,6 +92,8 @@ profile:
 
 <ResumeHighlight title="Key achievement">Describe impact in one or two sentences.</ResumeHighlight>
 
+<ResumeHighlight>Highlight without a title label.</ResumeHighlight>
+
 </ResumeHighlights>
 
 </ResumeBlock>
@@ -100,12 +103,14 @@ Resume layout activates when `resume: true` (or theme default) **and** `profile.
 
 ## Frontmatter
 
-| Field          | Type                   | Description                                   |
-| -------------- | ---------------------- | --------------------------------------------- |
-| `resume`       | `boolean`              | Enable resume layout                          |
-| `profile.name` | `string`               | Display name (required for resume mode)       |
-| `profile.meta` | `(string \| number)[]` | Contact info; email and phone are auto-linked |
-| `profile.tags` | `{ label: string }[]`  | Skill or intent tags                          |
+| Field          | Type                   | Description                                          |
+| -------------- | ---------------------- | ---------------------------------------------------- |
+| `resume`       | `boolean`              | Enable resume layout                                 |
+| `profile.name` | `string`               | Display name (required for resume mode)              |
+| `profile.meta` | `(string \| number)[]` | Contact info; email, phone, and URLs are auto-linked |
+| `profile.tags` | `{ label: string }[]`  | Skill or intent tags                                 |
+
+`profile.meta` items are linked when they match an email (`mailto:`), phone with 7+ digits (`tel:`), `http(s)://` URL, or domain-like string (prefixed with `https://`). Other values render as plain text.
 
 ## Theme config
 
@@ -159,21 +164,33 @@ Registered globally when using the default theme. Also exported from the main en
 
 ### `<ResumeBlock>`
 
-| Prop       | Type     | Description                             |
-| ---------- | -------- | --------------------------------------- |
-| `period`   | `string` | Time range, e.g. `2024.06-至今`         |
+| Prop       | Type     | Description                              |
+| ---------- | -------- | ---------------------------------------- |
+| `period`   | `string` | Time range, e.g. `2024.06-至今`          |
 | `title`    | `string` | Primary heading (company, project, etc.) |
-| `subtitle` | `string` | Secondary line (role, degree, etc.)     |
-| `stack`    | `string` | Comma-separated tech names for icon row |
+| `subtitle` | `string` | Secondary line (role, degree, etc.)      |
+| `stack`    | `string` | Comma-separated tech names for icon row  |
 
 Default slot: body content (e.g. `<ResumeHighlights>` or markdown).
 
 ### `<ResumeHighlights>` / `<ResumeHighlight>`
 
-- `<ResumeHighlights>` — list container
-- `<ResumeHighlight title="...">` — optional title row with description in the default slot
+- `<ResumeHighlights>` — list container (`<dl>`)
+- `<ResumeHighlight>` — description in the default slot; `title` is optional
 
-Stack icons resolve via [Simple Icons CDN](https://cdn.simpleicons.org/); unknown names are omitted.
+```md
+<ResumeHighlights>
+
+<ResumeHighlight title="Achievement">Impact in one or two sentences.</ResumeHighlight>
+
+<ResumeHighlight>Plain bullet without a title label.</ResumeHighlight>
+
+</ResumeHighlights>
+```
+
+### Tech stack icons
+
+`stack` names map to [Simple Icons](https://simpleicons.org/) slugs via [unpkg](https://unpkg.com/simple-icons@v16/icons/). Common aliases are built in (`js` → `javascript`, `ts` → `typescript`, `vue` → `vuedotjs`, `node` → `nodedotjs`, etc.); dots in names become `dot`. Icons that fail to load are hidden.
 
 ## Composables
 

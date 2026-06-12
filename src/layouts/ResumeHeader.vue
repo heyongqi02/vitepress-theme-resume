@@ -58,8 +58,7 @@ const metaItems = computed(() =>
           v-if="item.href"
           :href="item.href"
           class="resume-meta-link"
-          :rel="item.isExternal ? 'noopener noreferrer' : undefined"
-        >
+          :rel="item.isExternal ? 'noopener noreferrer' : undefined">
           {{ item.label }}
         </a>
         <span v-else class="min-w-0">{{ item.label }}</span>
