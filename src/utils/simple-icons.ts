@@ -20,7 +20,6 @@ const STACK_SLUG_ALIASES: Record<string, string> = {
   github: "github",
   rolldown: "rolldown",
   vitepress: "vitepress",
-  taro: "taro",
 };
 
 export function resolveSimpleIconSlug(name: string): string {

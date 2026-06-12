@@ -71,7 +71,7 @@ profile:
 
 </ResumeBlock>
 
-<ResumeBlock period="2024.06-2024.07" title="商品榜单" subtitle="项目开发人员" stack="react,typescript,taro">
+<ResumeBlock period="2024.06-2024.07" title="商品榜单" subtitle="项目开发人员" stack="react,typescript">
 
 <ResumeHighlights>
 
