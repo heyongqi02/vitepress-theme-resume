@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 import type { UserConfig } from "vitepress";
 
 import { baseConfig } from "./base";
@@ -20,12 +21,20 @@ export function defineResumeConfig(
 ): UserConfig {
   const { resume: resumeTheme, ...vpConfig } = config;
 
+  const vitePlugins = vpConfig.vite?.plugins;
+  const extraPlugins = Array.isArray(vitePlugins)
+    ? vitePlugins
+  : vitePlugins
+    ? [vitePlugins]
+    : [];
+
   return {
     ...baseConfig,
     ...vpConfig,
     vite: {
       ...baseConfig.vite,
       ...vpConfig.vite,
+      plugins: [tailwindcss(), ...extraPlugins],
       ssr: {
         ...baseConfig.vite?.ssr,
         ...vpConfig.vite?.ssr,
