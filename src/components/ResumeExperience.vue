@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
+import ResumeStackItem from "./ResumeStackItem.vue";
+
 const props = defineProps<{
   period: string;
   company?: string;
@@ -27,7 +29,7 @@ const stackItems = computed(
       <div class="resume-experience-meta">
         <time class="resume-experience-period">{{ period }}</time>
         <ul v-if="stackItems.length" class="resume-experience-stack" translate="no">
-          <li v-for="item in stackItems" :key="item">{{ item }}</li>
+          <ResumeStackItem v-for="item in stackItems" :key="item" :name="item" />
         </ul>
       </div>
     </header>

@@ -409,7 +409,10 @@
     list-style: none;
   }
 
-  .resume-experience-stack > li {
+  .resume-stack-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
     border-radius: var(--radius-resume);
     border: 1px solid var(--color-resume-divider);
     background-color: var(--color-resume-bg-mute);
@@ -420,8 +423,18 @@
     transition: border-color 0.25s;
   }
 
-  .resume-experience-stack > li:hover {
+  .resume-stack-item:hover {
     border-color: rgba(66, 184, 131, 0.45);
+  }
+
+  .resume-stack-item__icon {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  .resume-stack-item__label {
+    line-height: 1.25;
   }
 
   .resume-experience-body {
@@ -575,8 +588,13 @@
     background-color: transparent;
   }
 
-  .resume-experience-stack > li:hover {
+  .resume-stack-item:hover {
     border-color: var(--color-resume-divider);
+  }
+
+  .resume-stack-item__icon {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 
   .resume-content h2,
