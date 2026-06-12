@@ -123,9 +123,19 @@ profile:
 
 ## 教育经历
 
-<ResumeExperience period="2020-2024" company="南京邮电大学" role="本科，生物医学工程" />
+<ResumeExperience period="2020-2024" company="南京邮电大学" role="本科，生物医学工程">
+
+<ResumeHighlights>
+
+<ResumeHighlight title="核心课程">修读高等数学、大学物理、数据结构、计算机组成原理、计算机网络、微机原理等，具备扎实的数理基础与计算机底层知识。</ResumeHighlight>
+
+</ResumeHighlights>
+
+</ResumeExperience>
 
 ## 校园经历
+
+### 社团任职
 
 <ResumeExperience period="2020.10-2021.11" company="南京邮电大学" role="院学生会部员 & 部长、创联部员">
 
@@ -140,6 +150,8 @@ profile:
 </ResumeHighlights>
 
 </ResumeExperience>
+
+### 竞赛经历
 
 <ResumeExperience period="2021-2022" company="美国大学生数学建模竞赛（MCM/ICM）" role="队员">
 
