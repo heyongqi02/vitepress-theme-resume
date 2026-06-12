@@ -10,7 +10,9 @@ const props = defineProps<{
   tone?: string;
 }>();
 
-const iconComponent = computed(() => resolveHighlightIcon(props.icon));
+const iconComponent = computed(() =>
+  props.icon ? resolveHighlightIcon(props.icon) : null,
+);
 </script>
 
 <template>
@@ -18,13 +20,15 @@ const iconComponent = computed(() => resolveHighlightIcon(props.icon));
     <h4 class="flex items-center gap-2 text-[13px] font-medium text-zinc-900">
       <component
         :is="iconComponent"
+        v-if="iconComponent"
         class="size-3.5 shrink-0 text-zinc-400"
         :stroke-width="1.75"
         aria-hidden="true" />
       {{ title }}
     </h4>
     <div
-      class="mt-1 pl-5 text-[12.5px] leading-relaxed text-zinc-600 [&>p]:m-0 [&>p+p]:mt-1.5 [&_strong]:font-medium [&_strong]:text-zinc-800">
+      class="mt-1 text-[12.5px] leading-relaxed text-zinc-600 [&>p]:m-0 [&>p+p]:mt-1.5 [&_strong]:font-medium [&_strong]:text-zinc-800"
+      :class="iconComponent ? 'pl-5' : ''">
       <slot />
     </div>
   </article>

@@ -2,7 +2,6 @@
 import { computed } from "vue";
 
 import ResumeBrandIcon from "./ResumeBrandIcon.vue";
-import ResumeIconText from "./ResumeIconText.vue";
 import { normalizeBrandSlug } from "./brand-slugs";
 
 const props = defineProps<{
@@ -23,6 +22,6 @@ const brandSlug = computed(() => (props.icon ? normalizeBrandSlug(props.icon) : 
       <ResumeBrandIcon :slug="brandSlug" size="sm" :color="false" />
       <span>{{ label }}</span>
     </template>
-    <ResumeIconText v-else :text="text" />
+    <span v-else>{{ label }}</span>
   </span>
 </template>

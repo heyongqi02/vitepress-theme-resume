@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { ResumeProfile, ResumeProfileTag } from "../types";
 
-import ResumeIconText from "../components/ResumeIconText.vue";
 import ResumeSkillTag from "../components/ResumeSkillTag.vue";
 
 defineProps<{
@@ -23,7 +22,7 @@ defineProps<{
           v-if="index > 0"
           class="hidden h-3 w-px bg-zinc-300 sm:inline-block"
           aria-hidden="true" />
-        <ResumeIconText :text="item" />
+        <span>{{ item }}</span>
       </template>
     </p>
 

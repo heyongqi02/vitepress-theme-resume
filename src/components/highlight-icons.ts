@@ -9,7 +9,6 @@ import {
   MonitorSmartphone,
   Rocket,
   ShieldCheck,
-  Sparkles,
   Users,
   Wallet,
   Wrench,
@@ -26,15 +25,10 @@ const highlightIcons: Record<string, FunctionalComponent> = {
   modules: Boxes,
   perf: Gauge,
   quality: ShieldCheck,
-  sparkles: Sparkles,
   team: Users,
   wallet: Wallet,
 };
 
-export function resolveHighlightIcon(name?: string) {
-  if (!name) {
-    return Sparkles;
-  }
-
-  return highlightIcons[name] ?? Sparkles;
+export function resolveHighlightIcon(name: string) {
+  return highlightIcons[name] ?? null;
 }

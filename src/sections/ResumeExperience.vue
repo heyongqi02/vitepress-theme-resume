@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { CalendarRange } from "@lucide/vue";
 import { computed } from "vue";
 
 import ResumeBrandIcon from "../components/ResumeBrandIcon.vue";
@@ -20,9 +19,7 @@ const brands = computed(() => parseBrandStack(props.stack));
     class="resume-experience group relative mb-6 break-inside-avoid border-b border-zinc-200/80 pb-6 last:mb-0 last:border-b-0 last:pb-0 print:pb-4">
     <div
       class="resume-experience-period pointer-events-none absolute top-0 right-0 flex max-w-[52%] flex-col items-end gap-1.5 print:right-0">
-      <span
-        class="inline-flex items-center gap-1 text-xs tabular-nums tracking-wide text-zinc-500">
-        <CalendarRange class="size-3 shrink-0 text-zinc-400" :stroke-width="1.75" aria-hidden="true" />
+      <span class="text-xs tabular-nums tracking-wide text-zinc-500">
         {{ period }}
       </span>
       <span v-if="brands.length" class="flex flex-wrap justify-end gap-1">

@@ -33,31 +33,31 @@ profile:
 
 <ResumeHighlights>
 
-<ResumeHighlight icon="wallet" title="财务系统交付">
+<ResumeHighlight title="财务系统交付">
 
 承接商家后台财务模块需求、迭代与线上运维，聚焦报表性能优化，保障核心财务业务稳定落地。
 
 </ResumeHighlight>
 
-<ResumeHighlight icon="modules" title="组件与业务抽象">
+<ResumeHighlight title="组件与业务抽象">
 
 梳理复杂财务计算逻辑，沉淀报表、账单、筛选等通用组件，减少重复开发并提升前后端协作效率。
 
 </ResumeHighlight>
 
-<ResumeHighlight icon="mobile" title="跨端与营销页">
+<ResumeHighlight title="跨端与营销页">
 
 参与秒送门跨端小程序迭代，使用 React 交付营销活动 H5，持续优化交互细节与页面加载体验。
 
 </ResumeHighlight>
 
-<ResumeHighlight icon="perf" title="性能与工程规范">
+<ResumeHighlight title="性能与工程规范">
 
 推动代码评审与统一规范，从打包、渲染、组件复用等维度优化性能，并用 AI 辅助排查疑难问题。
 
 </ResumeHighlight>
 
-<ResumeHighlight icon="team" title="跨职能协作">
+<ResumeHighlight title="跨职能协作">
 
 对接产品、设计对齐需求与视觉规范，参与技术分享与资料沉淀，支持团队高效迭代交付。
 
@@ -73,19 +73,19 @@ profile:
 
 <ResumeHighlights>
 
-<ResumeHighlight icon="mobile" title="政务小程序">
+<ResumeHighlight title="政务小程序">
 
 从零搭建政务版小程序，使用 Vue 完成动态交互与功能迭代，保障多端体验稳定可用。
 
 </ResumeHighlight>
 
-<ResumeHighlight icon="engineering" title="后台系统维护">
+<ResumeHighlight title="后台系统维护">
 
 负责后台管理系统日常维护与性能优化，及时修复问题并提升响应速度与数据处理稳定性。
 
 </ResumeHighlight>
 
-<ResumeHighlight icon="team" title="协作与文档">
+<ResumeHighlight title="协作与文档">
 
 配合后端完成数据联调，编写规范代码与技术文档，推动前端新技术在团队内落地。
 
@@ -101,7 +101,7 @@ profile:
 
 **江苏汇鑫融智软件科技有限公司** 前端开发工程师
 
-<ResumeHighlight icon="code" title="低代码二次开发">
+<ResumeHighlight title="低代码二次开发">
 
 基于公司低代码平台二次开发后台管理页面，快速交付业务表单与列表场景。
 
@@ -117,25 +117,25 @@ profile:
 
 <ResumeHighlights>
 
-<ResumeHighlight icon="architecture" title="架构规范化">
+<ResumeHighlight title="架构规范化">
 
 主导财务前端架构治理，采用楼层化、模块化拆分页面，解决旧项目冗余与耦合问题。
 
 </ResumeHighlight>
 
-<ResumeHighlight icon="modules" title="组件库沉淀">
+<ResumeHighlight title="组件库沉淀">
 
 拓展报表、账单、筛选等高频组件，统一开发标准并提升团队页面搭建效率。
 
 </ResumeHighlight>
 
-<ResumeHighlight icon="perf" title="报表性能优化">
+<ResumeHighlight title="报表性能优化">
 
 通过预加载、离线缓存与 CDN 优化大数据报表渲染，显著改善白屏与加载卡顿。
 
 </ResumeHighlight>
 
-<ResumeHighlight icon="quality" title="质量与监控">
+<ResumeHighlight title="质量与监控">
 
 落地视觉还原与埋点监控体系，接入第三方 SDK，实现异常、接口与行为全量上报。
 
@@ -151,13 +151,13 @@ profile:
 
 <ResumeHighlights>
 
-<ResumeHighlight icon="modules" title="楼层化组件">
+<ResumeHighlight title="楼层化组件">
 
 模块化开发页面楼层组件，结合业务场景迭代公共组件，提升复用性与可维护性。
 
 </ResumeHighlight>
 
-<ResumeHighlight icon="mobile" title="多端适配">
+<ResumeHighlight title="多端适配">
 
 处理多端样式兼容与 UI 还原，完成埋点监控接入并优化加载与渲染性能。
 
