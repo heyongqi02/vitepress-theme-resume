@@ -34,11 +34,7 @@ export default defineConfig({
     sortTailwindcss: true,
   },
   pack: {
-    entry: {
-      index: "src/index.ts",
-      config: "src/config.ts",
-      style: "src/styles/index.css",
-    },
+
     attw: {
       enabled: true,
       ignoreRules: ["no-resolution"],
@@ -46,22 +42,29 @@ export default defineConfig({
     },
     banner: PACK_BANNER,
     copy: [{ from: "src/assets/fonts/*.woff2", to: "dist/assets/fonts" }],
+    deps: {
+      onlyBundle: false,
+    },
     devtools: true,
     dts: {
       vue: true,
+    },
+    entry: {
+      config: "src/config.ts",
+      index: "src/index.ts",
+      style: "src/styles/index.css",
     },
     exports: {
       packageJson: true,
       legacy: true,
     },
-    deps: {
-      onlyBundle: false,
-    },
     footer: PACK_FOOTER,
     platform: "neutral",
     plugins: [ApiSnapshot(), Vue({ isProduction: true })],
     publint: true,
+    shims: true,
     sourcemap: true,
+    unbundle: true,
     unused: true,
   },
   run: {
