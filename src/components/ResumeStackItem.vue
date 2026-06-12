@@ -19,6 +19,8 @@ const showIcon = computed(() => !iconFailed.value);
     <img
       :src="iconUrl"
       :alt="label"
+      width="12"
+      height="12"
       class="resume-stack-item__icon"
       loading="lazy"
       decoding="async"

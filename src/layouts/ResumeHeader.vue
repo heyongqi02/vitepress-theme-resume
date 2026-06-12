@@ -36,10 +36,14 @@ function getMetaHref(item: string | number): string | undefined {
 const { profile } = useResume();
 
 const metaItems = computed(() =>
-  (profile.value?.meta ?? []).map((item) => ({
-    href: getMetaHref(item),
-    label: String(item),
-  })),
+  (profile.value?.meta ?? []).map((item) => {
+    const href = getMetaHref(item);
+    return {
+      href,
+      isExternal: href?.startsWith("http") ?? false,
+      label: String(item),
+    };
+  }),
 );
 </script>
 
@@ -50,7 +54,12 @@ const metaItems = computed(() =>
     <p v-if="metaItems.length" class="resume-header-meta">
       <template v-for="(item, index) in metaItems" :key="item.label">
         <span v-if="index > 0" class="resume-header-meta-separator" aria-hidden="true">/</span>
-        <a v-if="item.href" :href="item.href" class="resume-meta-link">
+        <a
+          v-if="item.href"
+          :href="item.href"
+          class="resume-meta-link"
+          :rel="item.isExternal ? 'noopener noreferrer' : undefined"
+        >
           {{ item.label }}
         </a>
         <span v-else class="min-w-0">{{ item.label }}</span>
