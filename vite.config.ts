@@ -17,7 +17,7 @@ export default lib(
     },
     pack: {
       plugins: [Vue({ isProduction: true })],
-      dts: { vue: true },
+      dts: { vue: true, tsgo: false },
     },
   },
 );
