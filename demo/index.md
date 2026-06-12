@@ -6,7 +6,7 @@ profile:
     - 男
     - 年龄：23岁
     - 13520368086
-    - hi@bjmhe.me
+    - hi@heyongqi.me
   tags:
     - label: 前端开发工程师
     - label: 工程化与构建
