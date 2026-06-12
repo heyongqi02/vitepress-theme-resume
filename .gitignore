@@ -7,8 +7,8 @@ node_modules
 
 *.log
 
-docs/.vitepress/dist
-docs/.vitepress/cache
+**/*.vitepress/dist
+**/.vitepress/cache
 
 resume.pdf
 resume-xiaodong.png
