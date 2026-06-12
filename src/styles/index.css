@@ -121,55 +121,151 @@
     @apply absolute top-0 left-0 text-xs font-medium text-zinc-500 tabular-nums;
   }
 
-  /* Experience: title row (2-col) + full-width highlights below */
+  /* Experience blocks */
   .resume-experience {
-    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    @apply break-inside-avoid;
+  }
+
+  .resume-experience + .resume-experience {
+    padding-top: var(--space-md);
+    border-top: 1px solid oklch(0.92 0.002 250);
+  }
+
+  .resume-experience-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .resume-experience-company {
+    @apply text-[13px] leading-snug font-semibold text-zinc-900;
+  }
+
+  .resume-experience-role {
+    margin-top: var(--space-xs);
+    @apply text-[12px] leading-snug text-zinc-500;
+  }
+
+  .resume-experience-meta {
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  .resume-experience-period {
+    @apply text-[12px] tracking-wide text-zinc-500 tabular-nums;
+  }
+
+  .resume-experience-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    margin: var(--space-xs) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .resume-experience-stack > li {
+    @apply rounded border border-zinc-200/90 bg-zinc-50 px-1.5 py-px text-[10.5px] leading-tight text-zinc-500;
+  }
+
+  .resume-experience-body {
+    @apply text-zinc-600;
+  }
+
+  /* Legacy: title from markdown **Company** Role in slot */
+  .resume-experience:not(:has(.resume-experience-company)) {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     column-gap: var(--space-lg);
     row-gap: var(--space-sm);
-    @apply break-inside-avoid;
   }
 
-  .resume-experience:last-child {
-    margin-bottom: 0;
+  .resume-experience:not(:has(.resume-experience-company)) .resume-experience-header {
+    display: contents;
   }
 
-  .resume-experience-period {
+  .resume-experience:not(:has(.resume-experience-company)) .resume-experience-meta {
     grid-column: 2;
     grid-row: 1;
     align-self: start;
-    max-width: 8.5rem;
-    @apply text-right;
   }
 
-  .resume-experience-body {
+  .resume-experience:not(:has(.resume-experience-company)) .resume-experience-body {
     display: contents;
-    @apply text-zinc-600;
   }
 
-  .resume-experience-body > p:first-child {
+  .resume-experience:not(:has(.resume-experience-company)) .resume-experience-body > p:first-child {
     grid-column: 1;
     grid-row: 1;
     align-self: start;
     min-width: 0;
-    padding-right: var(--space-sm);
-    @apply text-[13px] leading-snug font-medium text-zinc-900;
+    @apply m-0 text-[13px] leading-snug font-medium text-zinc-900;
   }
 
-  .resume-experience-body > p:first-child strong {
+  .resume-experience:not(:has(.resume-experience-company))
+    .resume-experience-body
+    > p:first-child
+    strong {
     @apply font-semibold;
   }
 
-  .resume-experience-body > .resume-highlights,
-  .resume-experience-body > .resume-highlight {
+  .resume-experience:not(:has(.resume-experience-company))
+    .resume-experience-body
+    > :not(p:first-child) {
     grid-column: 1 / -1;
   }
 
   .resume-highlights {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: 0.375rem;
+  }
+
+  .resume-highlight {
+    display: grid;
+    grid-template-columns: minmax(4.75rem, max-content) minmax(0, 1fr);
+    column-gap: var(--space-md);
+    align-items: baseline;
+  }
+
+  .resume-highlight-title {
+    @apply text-[12.5px] font-medium text-zinc-800;
+  }
+
+  .resume-highlight-body {
+    @apply text-[12.5px] leading-[1.55] text-zinc-600;
+  }
+
+  @media (max-width: 480px) {
+    .resume-experience-header {
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .resume-experience-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-sm);
+      text-align: left;
+    }
+
+    .resume-experience-stack {
+      justify-content: flex-start;
+      margin-top: 0;
+    }
+
+    .resume-highlight {
+      grid-template-columns: 1fr;
+      row-gap: 0.125rem;
+    }
   }
 }
 

@@ -115,9 +115,9 @@ export default {
 
 ## Markdown components
 
-- `<ResumeExperience period="..." stack="...">` — work or project block
-- `<ResumeHighlights>` — two-column highlight grid
-- `<ResumeHighlight title="...">` — single highlight item
+- `<ResumeExperience period="..." company="..." role="..." stack="...">` — work or project block
+- `<ResumeHighlights>` — highlight list container
+- `<ResumeHighlight title="...">` — title + description row
 
 Components are also exported from the main entry for local imports.
 

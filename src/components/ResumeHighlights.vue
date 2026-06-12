@@ -1,5 +1,5 @@
 <template>
-  <div class="resume-highlights">
+  <ul class="resume-highlights">
     <slot />
-  </div>
+  </ul>
 </template>
