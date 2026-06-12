@@ -159,12 +159,12 @@ Registered globally when using the default theme. Also exported from the main en
 
 ### `<ResumeExperience>`
 
-| Prop     | Type     | Description                              |
-| -------- | -------- | ---------------------------------------- |
-| `period` | `string` | Time range, e.g. `2024.06-至今`          |
-| `company`| `string` | Company or institution name              |
-| `role`   | `string` | Job title or degree                      |
-| `stack`  | `string` | Comma-separated tech names for icon row  |
+| Prop      | Type     | Description                             |
+| --------- | -------- | --------------------------------------- |
+| `period`  | `string` | Time range, e.g. `2024.06-至今`         |
+| `company` | `string` | Company or institution name             |
+| `role`    | `string` | Job title or degree                     |
+| `stack`   | `string` | Comma-separated tech names for icon row |
 
 Default slot: body content (e.g. `<ResumeHighlights>` or markdown).
 
