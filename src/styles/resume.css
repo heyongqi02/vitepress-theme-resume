@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@source "../**/*.{vue,ts}";
+@source "../**/*.{vue,ts,js}";
 
 @theme {
   --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;

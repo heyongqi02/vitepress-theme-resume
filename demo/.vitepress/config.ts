@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vitepress";
 import { experienceContainer } from "vitepress-theme-resume/markdown/experience";
 
@@ -7,6 +8,9 @@ export default defineConfig({
   themeConfig: {
     sidebar: [],
     nav: [],
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
   markdown: {
     config(md) {
