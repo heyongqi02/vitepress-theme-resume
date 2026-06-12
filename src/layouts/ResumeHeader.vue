@@ -49,7 +49,7 @@ const metaItems = computed(() =>
 
     <p v-if="metaItems.length" class="resume-header-meta">
       <template v-for="(item, index) in metaItems" :key="item.label">
-        <span v-if="index > 0" class="resume-header-meta-separator" aria-hidden="true" />
+        <span v-if="index > 0" class="resume-header-meta-separator" aria-hidden="true">/</span>
         <a v-if="item.href" :href="item.href" class="resume-meta-link">
           {{ item.label }}
         </a>
@@ -59,10 +59,8 @@ const metaItems = computed(() =>
 
     <p v-if="profile.tags?.length" class="resume-header-tags">
       <template v-for="(tag, index) in profile.tags" :key="tag.label">
-        <span v-if="index > 0" class="resume-header-meta-separator" aria-hidden="true" />
-        <span class="resume-header-tag" :class="{ 'resume-header-tag--lead': index === 0 }">
-          {{ tag.label }}
-        </span>
+        <span v-if="index > 0" class="resume-header-meta-separator" aria-hidden="true">/</span>
+        <span class="resume-header-tag">{{ tag.label }}</span>
       </template>
     </p>
   </header>

@@ -65,7 +65,7 @@ profile:
 
 <ResumeHighlight title="多端兼容">修复多设备、多浏览器兼容问题，保障不同分辨率下 UI 体验一致。</ResumeHighlight>
 
-<ResumeHighlight title="规范与 AI 提效">建立开发规范与代码评审机制，借助 AI 辅助技术选型、遗留代码重构与复杂逻辑优化，提升研发质量。</ResumeHighlight>
+<ResumeHighlight title="AI 提效">建立开发规范与代码评审机制，借助 AI 辅助技术选型、遗留代码重构与复杂逻辑优化，提升研发质量。</ResumeHighlight>
 
 </ResumeHighlights>
 
@@ -79,7 +79,7 @@ profile:
 
 <ResumeHighlight title="跨端适配">使用 Taro 框架原生 API 完成多端样式兼容，解决移动端设备适配问题。</ResumeHighlight>
 
-<ResumeHighlight title="UI 还原与监控">100% 还原设计稿视觉效果，接入 SDK 完成埋点上报与线上监控。</ResumeHighlight>
+<ResumeHighlight title="UI 与监控">100% 还原设计稿视觉效果，接入 SDK 完成埋点上报与线上监控。</ResumeHighlight>
 
 <ResumeHighlight title="加载性能">通过预加载、缓存与 CDN 加速优化页面加载与渲染速度。</ResumeHighlight>
 
@@ -107,7 +107,7 @@ profile:
 
 <ResumeHighlights>
 
-<ResumeHighlight title="活动策划与执行">策划并组织学院迎新、文体活动与学术讲座，负责方案设计、物资协调与现场执行，保障活动按期落地。</ResumeHighlight>
+<ResumeHighlight title="活动策划">策划并组织学院迎新、文体活动与学术讲座，负责方案设计、物资协调与现场执行，保障活动按期落地。</ResumeHighlight>
 
 <ResumeHighlight title="团队管理">担任部长期间统筹部门日常事务，分工排期、对接院系与社团多方需求，锻炼组织协调与跨团队合作能力。</ResumeHighlight>
 

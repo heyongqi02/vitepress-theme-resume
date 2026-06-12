@@ -5,10 +5,10 @@ defineProps<{
 </script>
 
 <template>
-  <li class="resume-highlight">
-    <span class="resume-highlight-title">{{ title }}</span>
-    <div class="resume-highlight-body">
+  <div class="resume-highlight">
+    <dt class="resume-highlight-title">{{ title }}</dt>
+    <dd class="resume-highlight-body">
       <slot />
-    </div>
-  </li>
+    </dd>
+  </div>
 </template>
