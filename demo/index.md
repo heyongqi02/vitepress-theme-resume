@@ -125,6 +125,39 @@ profile:
 
 <ResumeExperience period="2020-2024" company="南京邮电大学" role="本科，生物医学工程" />
 
+## 校园经历
+
+<ResumeExperience period="2020.10-2021.11" company="南京邮电大学" role="院学生会部员 & 部长、创联部员">
+
+<ResumeHighlights>
+
+<ResumeHighlight title="活动策划与执行">策划并组织学院迎新、文体活动与学术讲座，负责方案设计、物资协调与现场执行，保障活动按期落地。</ResumeHighlight>
+
+<ResumeHighlight title="团队管理">担任部长期间统筹部门日常事务，分工排期、对接院系与社团多方需求，锻炼组织协调与跨团队合作能力。</ResumeHighlight>
+
+<ResumeHighlight title="创联部实践">参与创新创业项目联络与竞赛组织宣传，协助信息收集汇总与校企资源对接，推动学院科创氛围建设。</ResumeHighlight>
+
+</ResumeHighlights>
+
+</ResumeExperience>
+
+<ResumeExperience period="2021-2022" company="美国大学生数学建模竞赛（MCM/ICM）" role="队员">
+
+<ResumeHighlights>
+
+<ResumeHighlight title="国际二等奖">与团队协作完成选题建模、算法设计与英文论文撰写，获国际二等奖；具备数据分析、逻辑推理与限时攻坚能力。</ResumeHighlight>
+
+</ResumeHighlights>
+
+</ResumeExperience>
+
+## 荣誉奖项
+
+- 创新杯大学生课外学术科技作品竞赛校级三等奖
+- 大学生课外学术科技作品竞赛校级三等奖
+- 学校大学生创业设计大赛校级三等奖
+- 优秀共青团员、优秀班干部
+
 ## 资格证书
 
 - 大学英语四级
