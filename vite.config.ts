@@ -48,9 +48,7 @@ export default defineConfig({
     platform: "neutral",
     plugins: [ApiSnapshot(), Vue({ isProduction: true })],
     publint: true,
-    shims: true,
     sourcemap: true,
-    unbundle: true,
     unused: true,
   },
 });
