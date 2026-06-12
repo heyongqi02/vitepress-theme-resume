@@ -284,6 +284,8 @@ importers:
         specifier: ~3.2.0
         version: 3.2.9(typescript@6.0.3)
 
+  demo: {}
+
 packages:
 
   '@andrewbranch/untar.js@1.0.3':
