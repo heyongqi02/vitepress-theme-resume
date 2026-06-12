@@ -171,7 +171,7 @@ Default slot: body content (e.g. `<ResumeHighlights>` or markdown).
 ### `<ResumeHighlights>` / `<ResumeHighlight>`
 
 - `<ResumeHighlights>` — list container
-- `<ResumeHighlight title="...">` — title row with description in the default slot
+- `<ResumeHighlight title="...">` — optional title row with description in the default slot
 
 Stack icons resolve via [Simple Icons CDN](https://cdn.simpleicons.org/); unknown names are omitted.
 

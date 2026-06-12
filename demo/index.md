@@ -107,11 +107,11 @@ profile:
 
 <ResumeHighlights>
 
-<ResumeHighlight title="活动策划">策划并组织学院迎新、文体活动与学术讲座，负责方案设计、物资协调与现场执行，保障活动按期落地。</ResumeHighlight>
+<ResumeHighlight>策划并组织学院迎新、文体活动与学术讲座，负责方案设计、物资协调与现场执行，保障活动按期落地。</ResumeHighlight>
 
-<ResumeHighlight title="团队管理">担任部长期间统筹部门日常事务，分工排期、对接院系与社团多方需求，锻炼组织协调与跨团队合作能力。</ResumeHighlight>
+<ResumeHighlight>担任部长期间统筹部门日常事务，分工排期、对接院系与社团多方需求，锻炼组织协调与跨团队合作能力。</ResumeHighlight>
 
-<ResumeHighlight title="创联部实践">参与创新创业项目联络与竞赛组织宣传，协助信息收集汇总与校企资源对接，推动学院科创氛围建设。</ResumeHighlight>
+<ResumeHighlight>参与创新创业项目联络与竞赛组织宣传，协助信息收集汇总与校企资源对接，推动学院科创氛围建设。</ResumeHighlight>
 
 </ResumeHighlights>
 

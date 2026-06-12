@@ -474,6 +474,10 @@
     margin: 0;
   }
 
+  .resume-highlight:not(:has(.resume-highlight-title)) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .resume-highlight-title {
     width: var(--resume-highlight-label-width);
     flex-shrink: 0;
