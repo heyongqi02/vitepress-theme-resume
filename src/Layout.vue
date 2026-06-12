@@ -8,14 +8,17 @@ const { frontmatter } = useData<ResumeFrontmatter>()
 </script>
 
 <template>
-  <div class="resume-layout" :class="{ 'resume-layout--resume': frontmatter.resume }">
+  <div
+    class="min-h-screen"
+    :class="frontmatter.resume ? 'px-4 py-6 print:p-0' : ''"
+  >
     <ResumePage v-if="frontmatter.resume && frontmatter.profile">
       <ResumeHeader :profile="frontmatter.profile" />
-      <main class="resume-content vp-doc">
+      <main class="resume-content vp-doc text-gray-700">
         <Content />
       </main>
     </ResumePage>
-    <main v-else class="resume-fallback vp-doc">
+    <main v-else class="mx-auto max-w-3xl px-6 py-8 vp-doc">
       <Content />
     </main>
   </div>

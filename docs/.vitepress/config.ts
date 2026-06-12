@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import tailwindcss from '@tailwindcss/vite'
 import { experienceContainer } from '../../src/markdown/experience'
 import { fileURLToPath } from 'node:url'
 
@@ -10,6 +11,7 @@ export default defineConfig({
     nav: [],
   },
   vite: {
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
         '@theme': fileURLToPath(new URL('../../src', import.meta.url)),
