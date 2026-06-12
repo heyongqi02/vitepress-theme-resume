@@ -9,7 +9,7 @@ const STACK_SLUG_ALIASES: Record<string, string> = {
   ts: "typescript",
   vue: "vuedotjs",
   "vue.js": "vuedotjs",
-  "vue3": "vuedotjs",
+  vue3: "vuedotjs",
 };
 
 export function resolveSimpleIconSlug(name: string): string {
