@@ -342,11 +342,11 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: var(--space-md);
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-sm);
   }
 
   .resume-block-title {
-    font-size: var(--text-entry);
+    font-size: var(--text-section);
     line-height: 1.35;
     font-weight: 600;
     color: var(--color-resume-text-1);
@@ -357,7 +357,7 @@
     font-size: var(--text-body);
     font-weight: 400;
     line-height: 1.35;
-    color: var(--color-resume-text-1);
+    color: var(--color-resume-text-3);
   }
 
   .resume-block-meta {
@@ -410,6 +410,8 @@
 
   .resume-block-body {
     color: var(--color-resume-text-1);
+    font-size: var(--text-body);
+    line-height: 1.55;
   }
 
   /* Legacy: title from markdown **Title** Subtitle in slot */
