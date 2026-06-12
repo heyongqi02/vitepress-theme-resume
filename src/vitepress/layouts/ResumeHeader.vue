@@ -2,15 +2,34 @@
 import { computed } from "vue";
 
 import ResumeSkillTag from "../../components/ResumeSkillTag.vue";
-import { useResumeProfile } from "../../composables";
-import { getMetaHref, getMetaLabel } from "../../utils/meta-link";
+import { useResume } from "../use-resume";
 
-const profile = useResumeProfile();
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_PATTERN = /^[\d\s\-+()]+$/;
+
+function getMetaHref(item: string | number): string | undefined {
+  const text = String(item).trim();
+
+  if (EMAIL_PATTERN.test(text)) {
+    return `mailto:${text}`;
+  }
+
+  if (PHONE_PATTERN.test(text)) {
+    const digits = text.replace(/\D/g, "");
+    if (digits.length >= 7) {
+      return `tel:${digits}`;
+    }
+  }
+
+  return undefined;
+}
+
+const { profile } = useResume();
 
 const metaItems = computed(() =>
   (profile.value?.meta ?? []).map((item) => ({
     href: getMetaHref(item),
-    label: getMetaLabel(item),
+    label: String(item),
   })),
 );
 </script>

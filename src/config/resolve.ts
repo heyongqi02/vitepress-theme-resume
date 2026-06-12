@@ -5,7 +5,13 @@ import type {
   ResumeThemeOptions,
 } from "../types";
 
-import { defaultResumeThemeOptions } from "./defaults";
+export const defaultResumeThemeOptions: Required<
+  Pick<ResumeThemeOptions, "skipLinkLabel">
+> &
+  ResumeThemeOptions = {
+  enabled: true,
+  skipLinkLabel: "跳到主内容",
+};
 
 export function resolveResumeProfile(
   frontmatterProfile?: ResumeProfile,

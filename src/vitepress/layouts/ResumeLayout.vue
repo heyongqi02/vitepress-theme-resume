@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { useResumeConfig, useResumeMode } from "../../composables";
-import ResumeHeader from "../sections/ResumeHeader.vue";
+import { useResume } from "../use-resume";
+import ResumeHeader from "./ResumeHeader.vue";
 import ResumePage from "./ResumePage.vue";
 
-const isResumeMode = useResumeMode();
-const { config } = useResumeConfig();
+const { config, isResumeMode } = useResume();
 </script>
 
 <template>

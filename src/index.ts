@@ -7,12 +7,7 @@ export {
   ResumeHighlights,
   ResumeSkillTag,
 } from "./components";
-export {
-  withResumeConfigProvider,
-  useResumeConfig,
-  useResumeMode,
-  useResumeProfile,
-} from "./composables";
+export { useResume } from "./vitepress/use-resume";
 export { defineResumeConfig, baseConfig, defaultResumeThemeOptions } from "./config";
 export type {
   ResolvedResumeConfig,

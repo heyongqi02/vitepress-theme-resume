@@ -3,10 +3,7 @@
  */
 // #region Functions
 export function defineResumeConfig(_) {}
-export function useResumeConfig() {}
-export function useResumeMode() {}
-export function useResumeProfile() {}
-export function withResumeConfigProvider(_) {}
+export function useResume() {}
 // #endregion
 
 // #region Variables

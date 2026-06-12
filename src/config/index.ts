@@ -1,11 +1,14 @@
 import type { UserConfig } from "vitepress";
 
-import { baseConfig } from "./base";
-import { defaultResumeThemeOptions } from "./defaults";
+import type { ResumeThemeConfig } from "../types";
 
-export { baseConfig } from "./base";
-export { defaultResumeThemeOptions } from "./defaults";
-export { resolveResumeConfig, resolveResumeProfile } from "./resolve";
+import {
+  defaultResumeThemeOptions,
+  resolveResumeConfig,
+  resolveResumeProfile,
+} from "./resolve";
+
+export { defaultResumeThemeOptions, resolveResumeConfig, resolveResumeProfile };
 export type {
   ResolvedResumeConfig,
   ResumeFrontmatter,
@@ -14,6 +17,25 @@ export type {
   ResumeThemeConfig,
   ResumeThemeOptions,
 } from "../types";
+
+/**
+ * Node-side defaults for VitePress sites using vitepress-theme-resume.
+ * Intended to be extended from the consuming project's config file.
+ */
+export const baseConfig = {
+  themeConfig: {
+    nav: [],
+    sidebar: [],
+  },
+  vite: {
+    ssr: {
+      noExternal: ["vitepress-theme-resume"],
+    },
+    optimizeDeps: {
+      exclude: ["vitepress-theme-resume"],
+    },
+  },
+} satisfies UserConfig;
 
 export function defineResumeConfig(
   config: ResumeThemeConfig & UserConfig = {},

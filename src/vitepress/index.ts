@@ -5,7 +5,6 @@ import {
   ResumeHighlight,
   ResumeHighlights,
 } from "../components";
-import { withResumeConfigProvider } from "../composables";
 
 import ResumeLayout from "./layouts/ResumeLayout.vue";
 
@@ -16,7 +15,7 @@ const resumeMarkdownComponents = {
 } as const;
 
 export const ResumeTheme = {
-  Layout: withResumeConfigProvider(ResumeLayout),
+  Layout: ResumeLayout,
   enhanceApp({ app }) {
     for (const [name, component] of Object.entries(resumeMarkdownComponents)) {
       app.component(name, component);
