@@ -46,6 +46,7 @@ export default defineConfig({
       profile: "esm-only",
     },
     banner: PACK_BANNER,
+    copy: [{ from: "src/assets/fonts/*.woff2", to: "dist/assets/fonts" }],
     devtools: true,
     dts: {
       vue: true,

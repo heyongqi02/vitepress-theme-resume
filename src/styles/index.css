@@ -2,12 +2,35 @@
 
 @source "../**/*.{vue,ts,js}";
 
+@font-face {
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("./assets/fonts/inter-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 @theme {
-  --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
-  --color-resume-accent: oklch(0.45 0.01 250);
-  --color-resume-muted: oklch(0.55 0.01 250);
-  --color-resume-surface: oklch(1 0 0);
-  --color-resume-canvas: oklch(0.97 0.002 250);
+  --color-resume-brand: #42b883;
+  --color-resume-brand-dark: #33a06f;
+  --color-resume-canvas: #f9f9f9;
+  --color-resume-surface: #ffffff;
+  --color-resume-bg-mute: #f1f1f1;
+  --color-resume-text-1: #213547;
+  --color-resume-text-2: rgba(60, 60, 60, 0.7);
+  --color-resume-text-3: rgba(60, 60, 60, 0.33);
+  --color-resume-divider: rgba(60, 60, 60, 0.12);
+  --color-resume-accent: #42b883;
+  --color-resume-muted: rgba(60, 60, 60, 0.7);
+  --font-sans:
+    "Inter Variable", Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui,
+    sans-serif;
+  --shadow-resume-paper:
+    0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --radius-resume: 8px;
 
   /* Spacing rhythm: 4 / 8 / 12 / 16 / 24 / 28 */
   --space-xs: 0.25rem;
@@ -23,34 +46,168 @@
   html {
     color-scheme: light;
     font-family: var(--font-sans);
-    @apply bg-[var(--color-resume-canvas)] text-[13px] leading-[1.6] text-zinc-800 antialiased;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--color-resume-text-1);
+    background-color: var(--color-resume-canvas);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    @apply m-0;
+    margin: 0;
   }
 }
 
 @layer components {
+  .resume-layout {
+    min-height: 100dvh;
+    background-color: var(--color-resume-canvas);
+  }
+
+  .resume-page {
+    margin-inline: auto;
+    max-width: 210mm;
+    background-color: var(--color-resume-surface);
+    padding: 14mm 16mm;
+    border: 1px solid var(--color-resume-divider);
+    border-radius: var(--radius-resume);
+    box-shadow: var(--shadow-resume-paper);
+  }
+
+  .resume-doc-page {
+    margin-inline: auto;
+    max-width: 48rem;
+    padding: 2.5rem 1.5rem;
+    color: var(--color-resume-text-1);
+  }
+
+  .resume-doc-page a {
+    font-weight: 500;
+    color: var(--color-resume-brand);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+    transition: color 0.25s;
+  }
+
+  .resume-doc-page a:hover {
+    color: var(--color-resume-brand-dark);
+  }
+
   .resume-skip-link {
-    @apply fixed top-4 left-4 z-50 -translate-y-[200%] rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white shadow-md transition-transform duration-150;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 50;
+    transform: translateY(-200%);
+    border-radius: var(--radius-resume);
+    background-color: var(--color-resume-text-1);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-resume-surface);
+    box-shadow: var(--shadow-resume-paper);
+    transition: transform 0.15s;
   }
 
   .resume-skip-link:focus {
-    @apply translate-y-0 ring-2 ring-zinc-400 ring-offset-2 outline-none;
+    transform: translateY(0);
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--color-resume-surface),
+      0 0 0 4px var(--color-resume-brand);
   }
 
-  .resume-meta-link {
-    @apply text-zinc-500 underline-offset-2 hover:text-zinc-700 hover:underline;
-  }
-
-  .resume-meta-link:focus-visible,
-  .resume-content a:focus-visible {
-    @apply rounded-sm ring-2 ring-zinc-400 ring-offset-2 outline-none;
+  .resume-header {
+    border-bottom: 1px solid var(--color-resume-divider);
+    padding-bottom: 1.25rem;
   }
 
   .resume-header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-resume-text-1);
     text-wrap: balance;
+  }
+
+  .resume-header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 0.75rem;
+    margin-top: 0.5rem;
+    font-size: 12px;
+    color: var(--color-resume-text-2);
+  }
+
+  .resume-header-meta-separator {
+    display: none;
+    height: 0.75rem;
+    width: 1px;
+    background-color: var(--color-resume-divider);
+  }
+
+  @media (min-width: 640px) {
+    .resume-header-meta-separator {
+      display: inline-block;
+    }
+  }
+
+  .resume-header-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-top: 0.75rem;
+  }
+
+  .resume-meta-link {
+    min-width: 0;
+    color: var(--color-resume-text-2);
+    text-decoration: none;
+    transition: color 0.25s;
+  }
+
+  .resume-meta-link:hover {
+    color: var(--color-resume-brand);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+  }
+
+  .resume-meta-link:focus-visible,
+  .resume-content a:focus-visible,
+  .resume-doc-page a:focus-visible {
+    border-radius: 2px;
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--color-resume-surface),
+      0 0 0 4px var(--color-resume-brand);
+  }
+
+  .resume-tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius-resume);
+    border: 1px solid var(--color-resume-divider);
+    background-color: var(--color-resume-bg-mute);
+    padding: 0.125rem 0.5rem;
+    font-size: 11.5px;
+    color: var(--color-resume-text-2);
+  }
+
+  .resume-tag--primary {
+    border-color: rgba(66, 184, 131, 0.35);
+    background-color: rgba(66, 184, 131, 0.12);
+    color: var(--color-resume-brand-dark);
+    font-weight: 500;
+  }
+
+  .resume-content {
+    margin-top: 1.25rem;
   }
 
   .resume-content h2,
@@ -60,76 +217,153 @@
   }
 
   .resume-content h2 {
+    position: relative;
     margin-top: var(--space-section);
     margin-bottom: var(--space-md);
-    @apply border-b border-zinc-200 pb-2 text-[14px] font-semibold tracking-tight text-zinc-900;
+    padding-top: 1.25rem;
+    padding-left: 0.75rem;
+    border-top: 1px solid var(--color-resume-divider);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-resume-text-1);
+  }
+
+  .resume-content h2::before {
+    content: "";
+    position: absolute;
+    top: 1.25rem;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    border-radius: 2px;
+    background-color: var(--color-resume-brand);
   }
 
   .resume-content h2:first-child {
     margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .resume-content h2:first-child::before {
+    top: 0;
+  }
+
+  .resume-content a {
+    font-weight: 500;
+    color: var(--color-resume-brand);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+    transition: color 0.25s;
+  }
+
+  .resume-content a:hover {
+    color: var(--color-resume-brand-dark);
   }
 
   .resume-content .header-anchor {
-    @apply ml-1 text-zinc-300 no-underline opacity-0 transition-opacity duration-150;
+    margin-left: 0.25rem;
+    color: var(--color-resume-text-3);
+    text-decoration: none;
+    opacity: 0;
+    transition:
+      opacity 0.15s,
+      color 0.25s;
   }
 
   .resume-content h2:hover .header-anchor,
   .resume-content h2:focus-within .header-anchor,
   .resume-content .header-anchor:focus-visible {
-    @apply opacity-100;
+    opacity: 1;
   }
 
   .resume-content .header-anchor:focus-visible {
-    @apply rounded-sm text-zinc-500 ring-2 ring-zinc-400 ring-offset-2 outline-none;
+    color: var(--color-resume-brand);
   }
 
   .resume-content ul {
-    @apply m-0 list-none space-y-2 p-0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .resume-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .resume-content h2 + ul {
-    @apply grid gap-x-6 gap-y-2 sm:grid-cols-2;
+    display: grid;
+    gap: 0.5rem 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .resume-content h2 + ul {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 
   .resume-content ul > li {
-    @apply text-zinc-600;
+    color: var(--color-resume-text-2);
   }
 
   .resume-content h2 + ul > li {
-    @apply relative pl-3;
+    position: relative;
+    padding-left: 0.75rem;
   }
 
   .resume-content h2 + ul > li::before {
     content: "";
-    @apply absolute top-[0.6em] left-0 h-px w-1.5 bg-zinc-400;
+    position: absolute;
+    top: 0.6em;
+    left: 0;
+    height: 1px;
+    width: 0.375rem;
+    background-color: var(--color-resume-brand);
   }
 
   .resume-content ol {
-    @apply m-0 list-none space-y-2 p-0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .resume-experience-body ol {
-    @apply hidden;
+    display: none;
   }
 
   .resume-content ol > li {
-    @apply relative pl-5 text-zinc-600;
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--color-resume-text-2);
   }
 
   .resume-content ol > li::before {
     content: counter(list-item) ".";
-    @apply absolute top-0 left-0 text-xs font-medium text-zinc-500 tabular-nums;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-resume-text-3);
   }
 
   /* Experience blocks */
   .resume-experience {
     padding-bottom: var(--space-md);
-    @apply break-inside-avoid;
+    break-inside: avoid;
   }
 
   .resume-experience + .resume-experience {
     padding-top: var(--space-md);
-    border-top: 1px solid oklch(0.92 0.002 250);
+    border-top: 1px solid var(--color-resume-divider);
   }
 
   .resume-experience-header {
@@ -141,12 +375,17 @@
   }
 
   .resume-experience-company {
-    @apply text-[13px] leading-snug font-semibold text-zinc-900;
+    font-size: 13px;
+    line-height: 1.375;
+    font-weight: 600;
+    color: var(--color-resume-text-1);
   }
 
   .resume-experience-role {
     margin-top: var(--space-xs);
-    @apply text-[12px] leading-snug text-zinc-500;
+    font-size: 12px;
+    line-height: 1.375;
+    color: var(--color-resume-text-2);
   }
 
   .resume-experience-meta {
@@ -155,7 +394,10 @@
   }
 
   .resume-experience-period {
-    @apply text-[12px] tracking-wide text-zinc-500 tabular-nums;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-resume-text-2);
   }
 
   .resume-experience-stack {
@@ -169,11 +411,22 @@
   }
 
   .resume-experience-stack > li {
-    @apply rounded border border-zinc-200/90 bg-zinc-50 px-1.5 py-px text-[10.5px] leading-tight text-zinc-500;
+    border-radius: var(--radius-resume);
+    border: 1px solid var(--color-resume-divider);
+    background-color: var(--color-resume-bg-mute);
+    padding: 1px 0.375rem;
+    font-size: 10.5px;
+    line-height: 1.25;
+    color: var(--color-resume-text-2);
+    transition: border-color 0.25s;
+  }
+
+  .resume-experience-stack > li:hover {
+    border-color: rgba(66, 184, 131, 0.45);
   }
 
   .resume-experience-body {
-    @apply text-zinc-600;
+    color: var(--color-resume-text-2);
   }
 
   /* Legacy: title from markdown **Company** Role in slot */
@@ -203,14 +456,18 @@
     grid-row: 1;
     align-self: start;
     min-width: 0;
-    @apply m-0 text-[13px] leading-snug font-medium text-zinc-900;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.375;
+    font-weight: 500;
+    color: var(--color-resume-text-1);
   }
 
   .resume-experience:not(:has(.resume-experience-company))
     .resume-experience-body
     > p:first-child
     strong {
-    @apply font-semibold;
+    font-weight: 600;
   }
 
   .resume-experience:not(:has(.resume-experience-company))
@@ -236,11 +493,24 @@
   }
 
   .resume-highlight-title {
-    @apply text-[12.5px] font-medium text-zinc-800;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--color-resume-text-1);
   }
 
   .resume-highlight-body {
-    @apply text-[12.5px] leading-[1.55] text-zinc-600;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--color-resume-text-2);
+  }
+
+  .resume-highlight-body > p {
+    margin: 0;
+  }
+
+  .resume-highlight-body strong {
+    font-weight: 500;
+    color: var(--color-resume-text-1);
   }
 
   @media (max-width: 480px) {
@@ -281,11 +551,33 @@
 
 @media print {
   html {
-    @apply bg-white;
+    background-color: var(--color-resume-surface);
+  }
+
+  .resume-layout {
+    background-color: var(--color-resume-surface);
+  }
+
+  .resume-page {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .resume-skip-link {
     display: none;
+  }
+
+  .resume-tag {
+    border-color: var(--color-resume-divider);
+    background-color: transparent;
+  }
+
+  .resume-experience-stack > li:hover {
+    border-color: var(--color-resume-divider);
   }
 
   .resume-content h2,

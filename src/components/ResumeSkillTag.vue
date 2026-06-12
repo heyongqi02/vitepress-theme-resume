@@ -1,12 +1,12 @@
 <script setup lang="ts">
 defineProps<{
   text: string | number;
+  primary?: boolean;
 }>();
 </script>
 
 <template>
-  <span
-    class="inline-flex items-center rounded border border-zinc-200 bg-zinc-50/80 px-2 py-0.5 text-[11.5px] text-zinc-600 print:border-zinc-300 print:bg-transparent">
+  <span class="resume-tag" :class="{ 'resume-tag--primary': primary }">
     {{ String(text) }}
   </span>
 </template>

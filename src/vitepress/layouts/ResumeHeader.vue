@@ -35,28 +35,25 @@ const metaItems = computed(() =>
 </script>
 
 <template>
-  <header v-if="profile" class="resume-header border-b border-zinc-200 pb-5">
-    <h1 class="text-[24px] font-semibold tracking-tight text-zinc-900">
-      {{ profile.name }}
-    </h1>
+  <header v-if="profile" class="resume-header">
+    <h1>{{ profile.name }}</h1>
 
-    <p
-      v-if="metaItems.length"
-      class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-zinc-500">
+    <p v-if="metaItems.length" class="resume-header-meta">
       <template v-for="(item, index) in metaItems" :key="item.label">
-        <span
-          v-if="index > 0"
-          class="hidden h-3 w-px bg-zinc-300 sm:inline-block"
-          aria-hidden="true" />
-        <a v-if="item.href" :href="item.href" class="resume-meta-link min-w-0">
+        <span v-if="index > 0" class="resume-header-meta-separator" aria-hidden="true" />
+        <a v-if="item.href" :href="item.href" class="resume-meta-link">
           {{ item.label }}
         </a>
         <span v-else class="min-w-0">{{ item.label }}</span>
       </template>
     </p>
 
-    <div v-if="profile.tags?.length" class="mt-3 flex flex-wrap gap-1.5">
-      <ResumeSkillTag v-for="tag in profile.tags" :key="tag.label" :text="tag.label" />
+    <div v-if="profile.tags?.length" class="resume-header-tags">
+      <ResumeSkillTag
+        v-for="(tag, index) in profile.tags"
+        :key="tag.label"
+        :primary="index === 0"
+        :text="tag.label" />
     </div>
   </header>
 </template>
