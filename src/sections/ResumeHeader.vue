@@ -1,11 +1,21 @@
 <script setup lang="ts">
-import type { ResumeProfile, ResumeProfileTag } from "../types";
+import { computed } from "vue";
+
+import type { ResumeProfile } from "../types";
 
 import ResumeSkillTag from "../components/ResumeSkillTag.vue";
+import { getMetaHref, getMetaLabel } from "../utils/meta-link";
 
-defineProps<{
+const props = defineProps<{
   profile: ResumeProfile;
 }>();
+
+const metaItems = computed(() =>
+  (props.profile.meta ?? []).map((item) => ({
+    href: getMetaHref(item),
+    label: getMetaLabel(item),
+  })),
+);
 </script>
 
 <template>
@@ -15,14 +25,17 @@ defineProps<{
     </h1>
 
     <p
-      v-if="profile.meta?.length"
+      v-if="metaItems.length"
       class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13px] text-zinc-500">
-      <template v-for="(item, index) in profile.meta" :key="String(item)">
+      <template v-for="(item, index) in metaItems" :key="item.label">
         <span
           v-if="index > 0"
           class="hidden h-3 w-px bg-zinc-300 sm:inline-block"
           aria-hidden="true" />
-        <span>{{ item }}</span>
+        <a v-if="item.href" :href="item.href" class="resume-meta-link min-w-0">
+          {{ item.label }}
+        </a>
+        <span v-else class="min-w-0">{{ item.label }}</span>
       </template>
     </p>
 

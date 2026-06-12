@@ -207,12 +207,6 @@ importers:
 
   .:
     dependencies:
-      '@lucide/vue':
-        specifier: ^1.18.0
-        version: 1.18.0(vue@3.5.38(typescript@6.0.3))
-      simple-icons-font:
-        specifier: ^16.23.0
-        version: 16.23.0
       vitepress:
         specifier: ^2.0.0-alpha.17
         version: 2.0.0-alpha.17(@types/node@24.13.2)(jiti@2.7.0)(lightningcss@1.32.0)(postcss@8.5.15)(typescript@6.0.3)(yaml@2.9.0)
@@ -557,11 +551,6 @@ packages:
 
   '@loaderkit/resolve@1.0.6':
     resolution: {integrity: sha512-G8FdIoF5CypfwmD9rl8BXod5HDn8JqB0CCNBXDTaRZ+yRYhARrrSToX1zg1zy9jX3zLqigsELwhT4gNtkdQAUg==}
-
-  '@lucide/vue@1.18.0':
-    resolution: {integrity: sha512-DmnUpDB85PlMZ+ofjZLcKq3JoJnaD1bk7SIj9xwUvqerfNqA6hCLa0/m3gIybH6rdrErABbqvTD8yYJdNqiZ3Q==}
-    peerDependencies:
-      vue: '>=3.0.1'
 
   '@napi-rs/wasm-runtime@1.1.5':
     resolution: {integrity: sha512-AWPoBRJ9tsnVhor4sjO7rkni+7p+2IAEFj6cx06UgP10jkQHqay/36uRV/bFkgrh18D9vb4cr8Q0Pthskgzy+Q==}
@@ -2368,9 +2357,6 @@ packages:
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
 
-  simple-icons-font@16.23.0:
-    resolution: {integrity: sha512-Hc44Uuzm0n6g62lgDr+8NgJcpXZOx6fpLO03DpS/MOJTyT03ovGFt9qL2XpJNQrkvvEgGTlSm/G7SBR++C05YA==}
-
   sirv@3.0.2:
     resolution: {integrity: sha512-2wcC/oGxHis/BoHkkPwldgiPSYcpZK3JU28WoMVv55yHJgcZ8rlXvuG9iZggz+sU1d4bRgIGASwyWqjxu3FM0g==}
     engines: {node: '>=18'}
@@ -2931,10 +2917,6 @@ snapshots:
   '@loaderkit/resolve@1.0.6':
     dependencies:
       '@braidai/lang': 1.1.2
-
-  '@lucide/vue@1.18.0(vue@3.5.38(typescript@6.0.3))':
-    dependencies:
-      vue: 3.5.38(typescript@6.0.3)
 
   '@napi-rs/wasm-runtime@1.1.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
@@ -4348,8 +4330,6 @@ snapshots:
       '@types/hast': 3.0.4
 
   siginfo@2.0.0: {}
-
-  simple-icons-font@16.23.0: {}
 
   sirv@3.0.2:
     dependencies:
