@@ -34,7 +34,6 @@ export default defineConfig({
     sortTailwindcss: true,
   },
   pack: {
-
     attw: {
       enabled: true,
       ignoreRules: ["no-resolution"],
