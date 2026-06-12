@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { ResumeProfile } from "../types";
 
+import ResumeIconText from "../components/ResumeIconText.vue";
+
 defineProps<{
   profile: ResumeProfile;
 }>();
@@ -13,24 +15,24 @@ defineProps<{
     </h1>
     <p
       v-if="profile.meta?.length"
-      class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-zinc-500">
+      class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13px] text-zinc-500">
       <template v-for="(item, index) in profile.meta" :key="item">
         <span
           v-if="index > 0"
           class="hidden h-3 w-px bg-zinc-300 sm:inline-block"
           aria-hidden="true" />
-        <span>{{ item }}</span>
+        <ResumeIconText :text="item" />
       </template>
     </p>
     <p
       v-if="profile.intent?.length"
-      class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-zinc-600">
+      class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13px] text-zinc-600">
       <template v-for="(item, index) in profile.intent" :key="item">
         <span
           v-if="index > 0"
           class="hidden h-3 w-px bg-zinc-300 sm:inline-block"
           aria-hidden="true" />
-        <span>{{ item }}</span>
+        <ResumeIconText :text="item" />
       </template>
     </p>
   </header>

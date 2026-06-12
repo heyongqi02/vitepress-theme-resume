@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { CalendarRange } from "@lucide/vue";
+
 defineProps<{
   period: string;
 }>();
@@ -8,7 +10,8 @@ defineProps<{
   <div
     class="resume-experience group relative mb-5 break-inside-avoid rounded-r-sm border-l-2 border-slate-800/20 bg-zinc-50/60 py-3 pl-4 pr-1 print:border-l-slate-300 print:bg-transparent print:py-2 print:pl-3">
     <span
-      class="resume-experience-period pointer-events-none absolute top-3 right-3 text-xs font-medium tabular-nums tracking-wide text-zinc-400 print:top-2 print:right-0">
+      class="resume-experience-period pointer-events-none absolute top-3 right-3 inline-flex items-center gap-1 text-xs font-medium tabular-nums tracking-wide text-zinc-400 print:top-2 print:right-0">
+      <CalendarRange class="size-3 shrink-0" :stroke-width="2" aria-hidden="true" />
       {{ period }}
     </span>
     <div
