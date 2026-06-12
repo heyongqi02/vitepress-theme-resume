@@ -1,10 +1,6 @@
 <script setup lang="ts">
 defineProps<{
   title: string;
-  /** @deprecated icons are no longer rendered */
-  icon?: string;
-  /** @deprecated kept for markdown compat; styling is unified */
-  tone?: string;
 }>();
 </script>
 

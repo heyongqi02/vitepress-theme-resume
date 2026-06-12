@@ -3,9 +3,6 @@ import { computed } from "vue";
 
 const props = defineProps<{
   text: string | number;
-  /** @deprecated kept for markdown compat; styling is unified */
-  tone?: string;
-  icon?: string;
 }>();
 
 const label = computed(() => String(props.text));

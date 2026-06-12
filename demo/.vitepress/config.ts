@@ -1,16 +1,10 @@
 import { defineConfig } from "vitepress";
-import tailwindcss from "@tailwindcss/vite";
+import { defineResumeConfig } from "vitepress-theme-resume/config";
 
 export default defineConfig({
-  title: "贺永琪",
-  description: "前端开发工程师",
-  lang: "zh-CN",
-  themeConfig: {
-    sidebar: [],
-    nav: [],
-  },
-  vite: {
-    // @ts-ignore
-    plugins: [tailwindcss()]
-  }
+  extends: defineResumeConfig({
+    title: "贺永琪",
+    description: "前端开发工程师",
+    lang: "zh-CN",
+  }),
 });

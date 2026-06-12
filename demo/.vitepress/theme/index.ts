@@ -1,4 +1,4 @@
-import Theme from "vitepress-theme-resume";
+import ResumeTheme from "vitepress-theme-resume";
 import "vitepress-theme-resume/style.css";
 
-export default Theme;
+export default ResumeTheme;

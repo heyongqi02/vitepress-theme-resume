@@ -1,17 +1,14 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-import type { ResumeProfile } from "../types";
+import ResumeSkillTag from "../../components/ResumeSkillTag.vue";
+import { useResumeProfile } from "../../composables";
+import { getMetaHref, getMetaLabel } from "../../utils/meta-link";
 
-import ResumeSkillTag from "../components/ResumeSkillTag.vue";
-import { getMetaHref, getMetaLabel } from "../utils/meta-link";
-
-const props = defineProps<{
-  profile: ResumeProfile;
-}>();
+const profile = useResumeProfile();
 
 const metaItems = computed(() =>
-  (props.profile.meta ?? []).map((item) => ({
+  (profile.value?.meta ?? []).map((item) => ({
     href: getMetaHref(item),
     label: getMetaLabel(item),
   })),
@@ -19,7 +16,7 @@ const metaItems = computed(() =>
 </script>
 
 <template>
-  <header class="resume-header mb-8 border-b border-zinc-200 pb-6">
+  <header v-if="profile" class="resume-header mb-8 border-b border-zinc-200 pb-6">
     <h1 class="mb-3 text-[26px] font-semibold tracking-tight text-zinc-900">
       {{ profile.name }}
     </h1>
@@ -44,10 +41,6 @@ const metaItems = computed(() =>
         v-for="tag in profile.tags"
         :key="tag.label"
         :text="tag.label" />
-    </div>
-
-    <div v-else-if="profile.intent?.length" class="mt-4 flex flex-wrap gap-2">
-      <ResumeSkillTag v-for="item in profile.intent" :key="String(item)" :text="item" />
     </div>
   </header>
 </template>

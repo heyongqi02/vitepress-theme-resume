@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@source "../**/*.{vue,ts,js}";
+
+@theme {
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
+  --color-resume-accent: oklch(0.45 0.01 250);
+  --color-resume-muted: oklch(0.55 0.01 250);
+  --color-resume-surface: oklch(1 0 0);
+  --color-resume-canvas: oklch(0.97 0.002 250);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    font-family: var(--font-sans);
+    @apply bg-[var(--color-resume-canvas)] text-[13.5px] leading-[1.65] text-zinc-800 antialiased;
+  }
+
+  body {
+    @apply m-0;
+  }
+}

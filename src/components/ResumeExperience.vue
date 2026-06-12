@@ -4,8 +4,6 @@ import { computed } from "vue";
 const props = defineProps<{
   period: string;
   stack?: string;
-  /** @deprecated kept for markdown compat; styling is unified */
-  accent?: string;
 }>();
 
 const stackLabel = computed(() =>
