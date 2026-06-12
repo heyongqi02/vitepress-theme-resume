@@ -1,6 +1,22 @@
 # vitepress-theme-resume
 
-A VitePress theme for single-page resumes with print-friendly A4 layout.
+A VitePress theme for single-page resumes with print-friendly A4 layout, profile header, and structured experience blocks.
+
+## Features
+
+- A4 page layout with print styles (`@page size: A4`)
+- Profile header with auto-linked email and phone in `meta`
+- `<ResumeExperience>` blocks with period, company, role, and tech stack icons ([Simple Icons](https://simpleicons.org/))
+- `<ResumeHighlight>` / `<ResumeHighlights>` for structured bullet points
+- Layout slots for extending the theme without forking
+- `useResume()` composable for custom Vue components
+
+## Requirements
+
+- Node.js `>=24.16.0`
+- [VitePress](https://vitepress.dev/) `^2.0.0-alpha.17`
+- Vue `^3.5`
+- Tailwind CSS `^4` with `@tailwindcss/vite`
 
 ## Install
 
@@ -12,6 +28,8 @@ Add the Tailwind Vite plugin in your VitePress config so utility classes in them
 
 ```ts
 import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "vitepress";
+import { defineResumeConfig } from "vitepress-theme-resume/config";
 
 export default defineConfig({
   extends: defineResumeConfig({
@@ -21,11 +39,14 @@ export default defineConfig({
 });
 ```
 
+`defineResumeConfig` merges sensible defaults (empty nav/sidebar, SSR `noExternal` for this package).
+
 ## Quick start
 
 **.vitepress/config.ts**
 
 ```ts
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vitepress";
 import { defineResumeConfig } from "vitepress-theme-resume/config";
 
@@ -35,6 +56,7 @@ export default defineConfig({
     description: "Your role",
     lang: "zh-CN",
   }),
+  vite: { plugins: [tailwindcss()] },
 });
 ```
 
@@ -63,19 +85,25 @@ profile:
 
 ## Experience
 
-<ResumeExperience period="2024-至今" stack="vue,vite">
+<ResumeExperience period="2024-至今" company="Company Name" role="Role title" stack="vue,vite">
 
-**Company** Role title
+<ResumeHighlights>
+
+<ResumeHighlight title="Key achievement">Describe impact in one or two sentences.</ResumeHighlight>
+
+</ResumeHighlights>
 
 </ResumeExperience>
 ```
+
+Resume layout activates when `resume: true` (or theme default) **and** `profile.name` is set.
 
 ## Frontmatter
 
 | Field          | Type                   | Description                                   |
 | -------------- | ---------------------- | --------------------------------------------- |
 | `resume`       | `boolean`              | Enable resume layout                          |
-| `profile.name` | `string`               | Display name                                  |
+| `profile.name` | `string`               | Display name (required for resume mode)       |
 | `profile.meta` | `(string \| number)[]` | Contact info; email and phone are auto-linked |
 | `profile.tags` | `{ label: string }[]`  | Skill or intent tags                          |
 
@@ -88,6 +116,18 @@ profile:
 | `enabled`         | `true`       | Default resume mode when frontmatter omits `resume` |
 | `skipLinkLabel`   | `跳到主内容` | Skip link text                                      |
 | `profileDefaults` | —            | Default profile fields merged with page frontmatter |
+
+```ts
+defineResumeConfig({
+  title: "Your Name",
+  resume: {
+    profileDefaults: {
+      name: "Your Name",
+      tags: [{ label: "Open to work" }],
+    },
+  },
+});
+```
 
 ## Layout slots
 
@@ -115,11 +155,44 @@ export default {
 
 ## Markdown components
 
-- `<ResumeExperience period="..." company="..." role="..." stack="...">` — work or project block
-- `<ResumeHighlights>` — highlight list container
-- `<ResumeHighlight title="...">` — title + description row
+Registered globally when using the default theme. Also exported from the main entry for local imports.
 
-Components are also exported from the main entry for local imports.
+### `<ResumeExperience>`
+
+| Prop     | Type     | Description                              |
+| -------- | -------- | ---------------------------------------- |
+| `period` | `string` | Time range, e.g. `2024.06-至今`          |
+| `company`| `string` | Company or institution name              |
+| `role`   | `string` | Job title or degree                      |
+| `stack`  | `string` | Comma-separated tech names for icon row  |
+
+Default slot: body content (e.g. `<ResumeHighlights>` or markdown).
+
+### `<ResumeHighlights>` / `<ResumeHighlight>`
+
+- `<ResumeHighlights>` — list container
+- `<ResumeHighlight title="...">` — title row with description in the default slot
+
+Stack icons resolve via [Simple Icons CDN](https://cdn.simpleicons.org/); unknown names are omitted.
+
+## Composables
+
+```ts
+import { useResume } from "vitepress-theme-resume";
+
+const { config, isResumeMode, profile } = useResume();
+```
+
+## Development
+
+This repo uses [vite-plus](https://github.com/heyongqi02/vite-plus) and a `demo` workspace package.
+
+```bash
+pnpm install
+pnpm exec vp run demo_dev    # build theme + start demo dev server
+pnpm exec vp run demo_build  # build theme + demo site
+pnpm run build               # build theme package only
+```
 
 ## License
 
