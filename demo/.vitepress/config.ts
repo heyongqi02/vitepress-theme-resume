@@ -1,5 +1,4 @@
 import { defineConfig } from "vitepress";
-
 import { experienceContainer } from "vitepress-theme-resume";
 
 export default defineConfig({

@@ -34,7 +34,7 @@ export default defineConfig({
       legacy: true,
     },
     deps: {
-      onlyBundle: false
+      onlyBundle: false,
     },
     footer: PACK_FOOTER,
     platform: "neutral",
