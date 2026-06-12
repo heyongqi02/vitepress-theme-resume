@@ -76,8 +76,8 @@ export default defineConfig({
         dependsOn: ["vitepress-theme-resume#build"],
       },
       submodule: {
-        command: "git submodule update --init --recursive --force"
-      }
+        command: "git submodule update --init --recursive --force",
+      },
     },
   },
 });
