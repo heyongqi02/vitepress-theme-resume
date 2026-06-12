@@ -10,15 +10,15 @@ const { frontmatter } = useData<ResumeFrontmatter>()
 <template>
   <div
     class="min-h-screen"
-    :class="frontmatter.resume ? 'px-4 py-6 print:p-0' : ''"
+    :class="frontmatter.resume ? 'px-4 py-8 sm:px-6 print:p-0' : ''"
   >
     <ResumePage v-if="frontmatter.resume && frontmatter.profile">
       <ResumeHeader :profile="frontmatter.profile" />
-      <main class="resume-content vp-doc text-gray-700">
+      <main class="resume-content vp-doc">
         <Content />
       </main>
     </ResumePage>
-    <main v-else class="mx-auto max-w-3xl px-6 py-8 vp-doc">
+    <main v-else class="mx-auto max-w-3xl px-6 py-10 vp-doc">
       <Content />
     </main>
   </div>
