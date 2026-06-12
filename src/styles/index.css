@@ -8,13 +8,22 @@
   --color-resume-muted: oklch(0.55 0.01 250);
   --color-resume-surface: oklch(1 0 0);
   --color-resume-canvas: oklch(0.97 0.002 250);
+
+  /* Spacing rhythm: 4 / 8 / 12 / 16 / 24 / 28 */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 1.75rem;
+  --space-section: 1.75rem;
 }
 
 @layer base {
   html {
     color-scheme: light;
     font-family: var(--font-sans);
-    @apply bg-[var(--color-resume-canvas)] text-[13.5px] leading-[1.65] text-zinc-800 antialiased;
+    @apply bg-[var(--color-resume-canvas)] text-[13px] leading-[1.6] text-zinc-800 antialiased;
   }
 
   body {
@@ -51,11 +60,13 @@
   }
 
   .resume-content h2 {
-    @apply mt-9 mb-4 border-b border-zinc-200 pb-2 text-[15px] font-semibold tracking-tight text-zinc-900;
+    margin-top: var(--space-section);
+    margin-bottom: var(--space-md);
+    @apply border-b border-zinc-200 pb-2 text-[14px] font-semibold tracking-tight text-zinc-900;
   }
 
   .resume-content h2:first-child {
-    @apply mt-0;
+    margin-top: 0;
   }
 
   .resume-content .header-anchor {
@@ -77,7 +88,7 @@
   }
 
   .resume-content h2 + ul {
-    @apply grid gap-x-8 gap-y-2 sm:grid-cols-2;
+    @apply grid gap-x-6 gap-y-2 sm:grid-cols-2;
   }
 
   .resume-content ul > li {
@@ -90,7 +101,7 @@
 
   .resume-content h2 + ul > li::before {
     content: "";
-    @apply absolute top-[0.65em] left-0 h-px w-1.5 bg-zinc-400;
+    @apply absolute top-[0.6em] left-0 h-px w-1.5 bg-zinc-400;
   }
 
   .resume-content ol {
@@ -108,6 +119,42 @@
   .resume-content ol > li::before {
     content: counter(list-item) ".";
     @apply absolute top-0 left-0 text-xs font-medium text-zinc-500 tabular-nums;
+  }
+
+  /* Experience block rhythm */
+  .resume-experience {
+    margin-bottom: var(--space-lg);
+    @apply break-inside-avoid;
+  }
+
+  .resume-experience:last-child {
+    margin-bottom: 0;
+  }
+
+  .resume-experience-period {
+    float: right;
+    clear: right;
+    max-width: 42%;
+    margin-left: var(--space-lg);
+    margin-bottom: var(--space-xs);
+    @apply text-right;
+  }
+
+  .resume-experience-body {
+    @apply flow-root text-zinc-600;
+  }
+
+  .resume-experience-body > p:first-child {
+    margin-bottom: var(--space-sm);
+    @apply text-[13px] leading-snug font-medium text-zinc-900;
+  }
+
+  .resume-experience-body > p:first-child strong {
+    @apply font-semibold;
+  }
+
+  .resume-experience-body .resume-highlights {
+    margin-top: var(--space-sm);
   }
 }
 

@@ -16,19 +16,17 @@ const stackLabel = computed(() =>
 </script>
 
 <template>
-  <section
-    class="resume-experience group relative mb-6 break-inside-avoid border-b border-zinc-200/80 pb-6 last:mb-0 last:border-b-0 last:pb-0 print:pb-4">
-    <div
-      class="resume-experience-period mb-2 flex max-w-full flex-col items-start gap-1 sm:pointer-events-none sm:absolute sm:top-0 sm:right-0 sm:mb-0 sm:max-w-[52%] sm:items-end print:right-0">
-      <span class="text-xs tracking-wide text-zinc-500 tabular-nums">
+  <section class="resume-experience group">
+    <div class="resume-experience-period">
+      <p class="text-[12px] tracking-wide text-zinc-500 tabular-nums">
         {{ period }}
-      </span>
-      <span v-if="stackLabel" class="text-[11px] tracking-wide text-zinc-500" translate="no">
+      </p>
+      <p v-if="stackLabel" class="mt-0.5 text-[11px] leading-snug text-zinc-400" translate="no">
         {{ stackLabel }}
-      </span>
+      </p>
     </div>
     <div
-      class="resume-experience-body text-zinc-600 [&_.resume-highlights]:max-w-none [&_strong]:font-medium [&_strong]:text-zinc-900 [&>p]:mb-1.5 [&>p:first-child]:mb-3 [&>p:first-child]:max-w-none [&>p:first-child]:text-[13.5px] [&>p:first-child]:leading-snug [&>p:first-child]:font-medium [&>p:first-child]:text-zinc-900 sm:[&>p:first-child]:max-w-[calc(100%-5.5rem)]">
+      class="resume-experience-body [&_.resume-highlights]:max-w-none [&_strong]:font-medium [&_strong]:text-zinc-900 [&>p]:m-0 [&>p+p]:mt-2">
       <slot />
     </div>
   </section>

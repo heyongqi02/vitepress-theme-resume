@@ -66,8 +66,12 @@ export default defineConfig({
   },
   run: {
     tasks: {
-      dev: {
+      demo_dev: {
         command: "vp run --filter ./demo docs:dev",
+        dependsOn: ["vitepress-theme-resume#build"],
+      },
+      demo_build: {
+        command: "vp run --filter ./demo docs:build",
         dependsOn: ["vitepress-theme-resume#build"],
       },
     },

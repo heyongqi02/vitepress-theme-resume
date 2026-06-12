@@ -35,14 +35,14 @@ const metaItems = computed(() =>
 </script>
 
 <template>
-  <header v-if="profile" class="resume-header mb-8 border-b border-zinc-200 pb-6">
-    <h1 class="mb-3 text-[26px] font-semibold tracking-tight text-zinc-900">
+  <header v-if="profile" class="resume-header border-b border-zinc-200 pb-5">
+    <h1 class="text-[24px] font-semibold tracking-tight text-zinc-900">
       {{ profile.name }}
     </h1>
 
     <p
       v-if="metaItems.length"
-      class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13px] text-zinc-500">
+      class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-zinc-500">
       <template v-for="(item, index) in metaItems" :key="item.label">
         <span
           v-if="index > 0"
@@ -55,7 +55,7 @@ const metaItems = computed(() =>
       </template>
     </p>
 
-    <div v-if="profile.tags?.length" class="mt-4 flex flex-wrap gap-2">
+    <div v-if="profile.tags?.length" class="mt-3 flex flex-wrap gap-1.5">
       <ResumeSkillTag v-for="tag in profile.tags" :key="tag.label" :text="tag.label" />
     </div>
   </header>
