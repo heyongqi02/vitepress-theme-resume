@@ -1,6 +1,6 @@
 {
   "name": "vitepress-theme-resume",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A VitePress theme for creating resumes",
   "license": "Apache-2.0",
   "author": "Yongqi He <hi@heyongqi.me>",
