@@ -4,10 +4,11 @@ import { computed } from "vue";
 import { resolveResumeIcon } from "./resolve-icon";
 
 const props = defineProps<{
-  text: string;
+  text: string | number;
 }>();
 
 const icon = computed(() => resolveResumeIcon(props.text));
+const label = computed(() => String(props.text));
 </script>
 
 <template>
@@ -18,6 +19,6 @@ const icon = computed(() => resolveResumeIcon(props.text));
       class="size-3.5 shrink-0 text-zinc-400 print:text-zinc-500"
       :stroke-width="2"
       aria-hidden="true" />
-    <span>{{ text }}</span>
+    <span>{{ label }}</span>
   </span>
 </template>

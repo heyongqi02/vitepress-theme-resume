@@ -1,7 +1,7 @@
 export interface ResumeProfile {
   name: string;
-  meta?: string[];
-  intent?: string[];
+  meta?: Array<string | number>;
+  intent?: Array<string | number>;
 }
 
 export interface ResumeFrontmatter {

@@ -23,8 +23,10 @@ const iconRules: Array<{ test: (text: string) => boolean; icon: FunctionalCompon
   { test: (text) => /^\d+年/.test(text), icon: Briefcase },
 ];
 
-export function resolveResumeIcon(text: string) {
-  return iconRules.find((rule) => rule.test(text))?.icon ?? null;
+export function resolveResumeIcon(text: string | number) {
+  const value = String(text);
+
+  return iconRules.find((rule) => rule.test(value))?.icon ?? null;
 }
 
 export { CalendarRange };
