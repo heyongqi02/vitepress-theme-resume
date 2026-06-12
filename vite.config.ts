@@ -3,19 +3,21 @@ import ApiSnapshot from "tsnapi/rolldown";
 import Vue from "unplugin-vue/rolldown";
 import { defineConfig } from "vite-plus";
 
+const ignorePatterns = [
+  "__snapshots__/**/*",
+  "dist/**/*",
+  "coverage/**/*",
+  "themes/**/*",
+  ".agents/**/*",
+  "CODE_OF_CONDUCT.md",
+];
 const PACK_BANNER = "/*! Keep it simple, keep it free */";
 const PACK_FOOTER = "/*! Built with love & coffee ☕ */";
 
 export default defineConfig({
   plugins: [tailwindcss()],
   lint: {
-    ignorePatterns: [
-      "__snapshots__/**/*",
-      "dist/**/*",
-      "coverage/**/*",
-      "themes/**/*",
-      ".agents/**/*",
-    ],
+    ignorePatterns,
     options: {
       typeAware: true,
       typeCheck: true,
@@ -23,15 +25,12 @@ export default defineConfig({
   },
   fmt: {
     bracketSameLine: true,
-    ignorePatterns: [
-      "__snapshots__/**/*",
-      "dist/**/*",
-      "coverage/**/*",
-      "themes/**/*",
-      ".agents/**/*",
-    ],
+    ignorePatterns,
     jsdoc: true,
     sortImports: true,
+    sortPackageJson: {
+      sortScripts: true,
+    },
     sortTailwindcss: true,
   },
   pack: {
