@@ -28,14 +28,12 @@
     "access": "public"
   },
   "scripts": {
-    "build": "vp pack && node scripts/copy-icon-fonts.mjs",
+    "build": "vp pack",
     "prepublishOnly": "vp run build",
     "release": "bumpp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@lucide/vue": "^1.18.0",
-    "simple-icons-font": "^16.23.0",
     "vitepress": "^2.0.0-alpha.17",
     "vue": "^3.5.38"
   },

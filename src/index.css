@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "simple-icons-font/font/simple-icons.min.css";
 
 @source "./**/*.{vue,ts,js}";
 
@@ -82,10 +81,6 @@
   .resume-content h2,
   .resume-experience {
     break-inside: avoid;
-  }
-
-  .si--color::before {
-    color: inherit !important;
   }
 
   @page {

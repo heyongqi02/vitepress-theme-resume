@@ -30,8 +30,7 @@ defineProps<{
       <ResumeSkillTag
         v-for="tag in profile.tags"
         :key="tag.label"
-        :text="tag.label"
-        :icon="tag.icon" />
+        :text="tag.label" />
     </div>
 
     <div v-else-if="profile.intent?.length" class="mt-4 flex flex-wrap gap-2">

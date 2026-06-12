@@ -9,11 +9,8 @@ profile:
     - hi@bjmhe.me
   tags:
     - label: 前端开发工程师
-      icon: vuedotjs
     - label: 工程化与构建
-      icon: vite
     - label: 开源与技术输出
-      icon: github
     - label: 期望城市：上海
 ---
 
