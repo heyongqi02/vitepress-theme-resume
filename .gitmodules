@@ -1,0 +1,6 @@
+[submodule "themes/vitepress-theme-vuejs"]
+	path = themes/vitepress-theme-vuejs
+	url = https://github.com/vuejs/theme.git
+[submodule "themes/vitepress-theme-curve"]
+	path = themes/vitepress-theme-curve
+	url = https://github.com/imsyy/vitepress-theme-curve.git
