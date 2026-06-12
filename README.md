@@ -1,5 +1,11 @@
 # vitepress-theme-resume
 
+[![npm version](https://npmx.dev/api/registry/badge/version/vitepress-theme-resume)](https://npmjs.com/package/vitepress-theme-resume)
+[![npm downloads](https://npmx.dev/api/registry/badge/downloads/vitepress-theme-resume)](https://npm.chart.dev/vitepress-theme-resume)
+[![bundle size](https://npmx.dev/api/registry/badge/size/vitepress-theme-resume)](https://bundlephobia.com/package/vitepress-theme-resume)
+[![license](https://npmx.dev/api/registry/badge/license/vitepress-theme-resume)](https://github.com/bjmhe/template/blob/main/LICENSE)
+[![engine](https://npmx.dev/api/registry/badge/engines/vitepress-theme-resume)](https://npmx.dev/api/registry/badge/engines/vitepress-theme-resume)
+
 A VitePress theme for single-page resumes with print-friendly A4 layout, profile header, and structured resume blocks.
 
 ## Features
