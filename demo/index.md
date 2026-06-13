@@ -39,16 +39,6 @@ profile:
 
 </ResumeBlock>
 
-<ResumeBlock period="2023.07-2024.02" title="江苏群杰物联科技有限公司" subtitle="前端开发工程师" stack="vue,webpack">
-
-<ResumeHighlights>
-
-<ResumeHighlight title="小程序与后台">从零搭建政务版小程序，负责后台管理系统维护与性能优化，配合后端联调并编写技术文档，保障多端稳定可用。</ResumeHighlight>
-
-</ResumeHighlights>
-
-</ResumeBlock>
-
 ## 项目经历
 
 <ResumeBlock period="2024.07-至今" title="外卖商家中心" subtitle="财务模块负责人" stack="react,typescript,vite,nodejs">
